@@ -1,0 +1,16 @@
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+/home/ggainat/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20160314-8355-1c51jq6.rb extconf.rb
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.
