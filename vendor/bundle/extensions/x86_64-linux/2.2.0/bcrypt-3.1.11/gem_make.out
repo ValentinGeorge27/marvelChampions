@@ -1,0 +1,19 @@
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+/home/ggainat/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20160315-23451-1niet15.rb extconf.rb
+creating Makefile
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+compiling crypt.c
+compiling bcrypt_ext.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bcrypt_ext.so ./.gem.20160315-23451-1l5l07y
