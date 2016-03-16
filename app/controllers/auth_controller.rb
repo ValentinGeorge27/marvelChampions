@@ -1,11 +1,18 @@
 class AuthController < ApplicationController
+  skip_before_action :authenticate!
+
   def login
     user = User.find_by(email: params[:email])
-    if User.authenticate(login_params)
-      render json: { user: user, auth_token: user.generate_auth_token }
+    if user
+      if User.authenticate(params[:email], params[:password])
+        render json: { user: user, auth_token: user.generate_auth_token }
+      else
+        render json: { error: 'Invalid username or password' }, status: :unauthorized
+      end
     else
       render json: { error: 'Invalid username or password' }, status: :unauthorized
     end
+
   end
 
   private

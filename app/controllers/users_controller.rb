@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :authenticate!, only: [:create]
+
 
   def create
     user = User.new(users_params)
@@ -12,10 +14,7 @@ class UsersController < ApplicationController
   private
 
   def users_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:email,:username,:password)
   end
 
-  def login_params
-    params.require(:user).permit(:email, :password)
-  end
 end
