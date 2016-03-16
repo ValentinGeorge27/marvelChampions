@@ -1,0 +1,51 @@
+<div class="loginPage">
+    <div class="loginpanel">
+        <form novalidate name="registerForm" ng-submit="register()">
+            <div class="txt" ng-class="{error: errors.errors.email}">
+                <input type="email" name="email" placeholder="Email" ng-model="user.email" required/>
+                <div class="error" ng-show="registerForm.email.$dirty && registerForm.email.$invalid && !registerForm.email.$focused">
+                    <span class="help-inline" ng-show="registerForm.email.$error.required">Required</span>
+                    <span class="help-inline" ng-show="registerForm.email.$error.email">Invalid Email</span>
+                </div>
+
+            </div>
+            <div class="txt" ng-class="{error: errors.errors.username}">
+                <input type="text" name="username" placeholder="Username" ng-model="user.username" ng-required="true">
+                <div class="error" ng-show="registerForm.username.$dirty && registerForm.username.$invalid && !registerForm.username.$focused">
+                    <span class="help-inline" ng-show="registerForm.username.$error.required">Required</span>
+                </div>
+            </div>
+            <div class="txt" ng-class="{error: errors.errors.password}">
+                <input type="password" name="password" ng-minlength="8" placeholder="Password" ng-model="user.password" ng-required="true">
+                <div class="error" ng-show="registerForm.password.$dirty && registerForm.password.$invalid && !registerForm.password.$focused">
+                    <span class="help-inline" ng-show="registerForm.password.$error.required">Required</span>
+                    <span class="help-inline" ng-show="registerForm.password.$error.minlength">Password too short</span>
+                </div>
+            </div>
+            <div class="txt" ng-class="{error: errors.errors.password_confirmation}">
+                <input type="password" name="password_confirmation" placeholder="Password Confirmation" ng-model="user.password_confirmation" ng-required="true">
+                <div class="error" ng-show="registerForm.password_confirmation.$dirty && registerForm.password_confirmation.$invalid && !registerForm.password_confirmation.$focused    ">
+                    <span class="help-inline" ng-show="registerForm.password_confirmation.$error.required">Required</span>
+                    <span class="help-inline" ng-show="registerForm.password_confirmation.$error.minlength">Password too short</span>
+                </div>
+            </div>
+
+            <input type="button" ng-click="reset_users()" value="Reset Values">
+            <input type="submit" ng-disabled="!registerForm.$valid" class="btn btn-default" value="Register">
+
+            <div ng-show="errors.message" class="error">
+                <p>{{errors.message}}</p>
+            </div>
+        </form>
+
+        <div class="hr">
+            <div></div>
+            <div>OR</div>
+            <div></div>
+        </div>
+
+        <div class="links">
+            <a href="#/login">Log In</a>
+        </div>
+    </div>
+</div>
