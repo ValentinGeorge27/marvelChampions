@@ -5,10 +5,14 @@ marvel = angular.module('marvel', [
 
 marvel.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
-        .state('/', {
+        .state('home', {
             url: '/',
-            templateUrl: "index.html",
-            controller: 'HomeController'
+            views: {
+                'header': {
+                    templateUrl: 'nav/nav.html',
+                    controller: 'HomeController'
+                }
+            }
         })
         .state('login', {
             url: '/login',
@@ -19,9 +23,27 @@ marvel.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider,
             url: '/register',
             templateUrl: 'auth/_register.html',
             controller: 'AuthController'
+        })
+        .state('home.allianceQuest', {
+            url: 'allianceQuest',
+            views: {
+                'content@': {
+                    templateUrl: 'alliance_quest/_mainQuest.html',
+                    controller: 'QuestController'
+                }
+            }
+        })
+        .state('home.allianceWar', {
+            url: 'allianceWar',
+            views: {
+                'content@': {
+                    templateUrl: 'alliance_war/_mainWar.html',
+                    controller: 'WarController'
+                }
+            }
         });
 
-    $urlRouterProvider.otherwise('login');
+
 
 }]);
 

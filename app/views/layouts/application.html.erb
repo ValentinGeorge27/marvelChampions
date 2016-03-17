@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
   <title>MarvelChampions</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body ng-app="marvel">
+  <div ui-view>
+    <div ui-view="header"></div>
+    <div ui-view="content"></div>
+  </div>
 </body>
 </html>
