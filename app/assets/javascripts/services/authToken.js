@@ -12,7 +12,9 @@ angular.module('marvel')
         };
 
         authToken.unset = function(key){
-            localStorage.removeItem(key);
+            window.localStorage.removeItem(key);
+            console.log(localStorage.getItem(key));
+            return '';
         };
 
         return authToken;

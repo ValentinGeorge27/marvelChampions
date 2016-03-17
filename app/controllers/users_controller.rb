@@ -5,7 +5,13 @@ class UsersController < ApplicationController
   def create
     user = User.new(users_params)
     if user.save
-      render json: { user: user, auth_token: user.generate_auth_token }
+      render json: {
+          user: {
+              email: user.email,
+              username: user.username
+          },
+          auth_token: user.generate_auth_token
+      }
     else
       render json: { error: 'Invalid username or password' }, status: :unauthorized
     end

@@ -3,6 +3,7 @@ angular.module('marvel')
         $scope.user = currentUser;
 
         $scope.logout = function() {
+            console.log($scope.user);
             AuthService.logout();
             $state.go('login');
         };

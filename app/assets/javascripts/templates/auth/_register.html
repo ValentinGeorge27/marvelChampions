@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <input type="button" ng-click="reset_users()" value="Reset Values">
+            <input type="button" ng-click="reset_users(registerForm)" value="Reset Values">
             <input type="submit" ng-disabled="!registerForm.$valid" class="btn btn-default" value="Register">
 
             <div ng-show="errors.message" class="error">

@@ -6,7 +6,7 @@ angular.module('marvel')
 
             $scope.login = function() {
                 AuthService.login($scope.user.email, $scope.user.password).then(function(){
-                    $state.go('/');
+                    $state.go('home');
                 }, function(data, status) {
                     errorService.failure( data, status, $scope);
                 });
@@ -14,13 +14,14 @@ angular.module('marvel')
 
             $scope.register = function() {
                 AuthService.register($scope.user).then(function(){
-                    $state.go('/');
+                    $state.go('home');
                 }, function(data, status) {
                     errorService.failure( data, status, $scope);
                 });
             };
 
-            $scope.reset_users = function() {
+            $scope.reset_users = function(registerForm) {
                 $scope.user = { email: null, username: null, password: null };
+                registerForm.$setPristine();
             };
         }]);
