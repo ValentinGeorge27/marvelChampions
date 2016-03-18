@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   root 'application#angular'
 
   post 'auth', to: 'auth#login'
-  resources :users, only: [:create]
+  resources :users, only: [:create] do
+    resources :time_availabilities, only: [:create, :show]
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

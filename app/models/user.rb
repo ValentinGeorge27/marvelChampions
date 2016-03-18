@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :roles_users
   has_many :roles, through: :roles_users
+  has_many :time_availabilities
 
   authenticates_with_sorcery!
 

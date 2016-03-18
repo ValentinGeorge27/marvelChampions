@@ -1,6 +1,7 @@
 marvel = angular.module('marvel', [
     'ui.router',
-    'templates'
+    'templates',
+    'ngResource'
     ]);
 
 marvel.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
@@ -12,8 +13,8 @@ marvel.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider,
                     templateUrl: 'nav/nav.html',
                     controller: 'HomeController'
                 },
-                'content@': {
-                    templateUrl: 'user/profile.html',
+                'content': {
+                    templateUrl: 'user/user_index.html',
                     controller: 'HomeController'
                 }
             },
@@ -48,6 +49,23 @@ marvel.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider,
                 }
             },
             data: { requireLogin: true }
+        })
+        .state('home.profile', {
+            url: 'user/profile',
+            views: {
+                'user-view':{
+                    templateUrl: 'user/profile.html',
+                    controller: 'UserController'
+                }
+            }
+        })
+        .state('home.time_availability', {
+            url: 'user/time_availability',
+            views: {
+                'user-view':{
+                    templateUrl: 'user/time_availability.html'
+                }
+            }
         });
 
 }])
