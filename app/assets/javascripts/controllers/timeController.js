@@ -7,6 +7,11 @@ angular.module('marvel')
         $scope.days= days;
 
         $scope.time = [];
+            timeAvailabilityService.getTime().then(function(response){
+                angular.forEach(response,function(value, key){
+                    $scope.time = value;
+                });
+            });
 
         $scope.toggleActive = function(hour, day){
             console.log($scope.findInTime(hour,day));
@@ -41,7 +46,7 @@ angular.module('marvel')
             }
         };
 
-        $scope.save = function(){
-            timeAvailability.save($scope.time);
+        $scope.saveTime = function(){
+            timeAvailabilityService.saveTime($scope.time);
         }
     }]);

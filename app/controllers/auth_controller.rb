@@ -7,6 +7,7 @@ class AuthController < ApplicationController
       if User.authenticate(params[:email], params[:password])
         render json: {
             user: {
+                id: user.id,
                 email: user.email,
                 username: user.username
             },

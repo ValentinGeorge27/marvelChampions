@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   post 'auth', to: 'auth#login'
   resources :users, only: [:create] do
-    resources :time_availabilities, only: [:create, :show]
+    resources :time_availabilities, only: [:create, :index]
   end
 
   # Example of regular route:

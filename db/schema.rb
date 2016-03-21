@@ -38,10 +38,10 @@ ActiveRecord::Schema.define(version: 20160318135622) do
   end
 
   create_table "time_availabilities", force: :cascade do |t|
-    t.json     "time_availability"
-    t.integer  "users_id",          null: false
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.json     "time",       default: [],              array: true
+    t.integer  "user_id",                 null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "users", force: :cascade do |t|
