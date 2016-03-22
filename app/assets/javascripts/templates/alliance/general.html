@@ -4,19 +4,22 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-2">
-                <input name="name" ng-model="alliance.name" ng-disabled="true" required/><br><br>
+                <input name="name" ng-model="alliance.name" ng-disabled="button" ng-init="button=true" required/><br><br>
             </div>
 
-            <div class="col-md-1">
-                <input type="button" class="btn btn-success" value="Edit" />
+            <div class="col-md-2">
+                <input ng-hide="button" type="button" class="btn btn-success" ng-click="" value="Save" />
+                <input ng-show="button" type="button" class="btn btn-success" ng-click="button=false" value="Edit" />
                 <input type="button" class="btn btn-danger" value="Delete" />
             </div>
         </div>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-6">
-                <input name="description" ng-model="alliance.description" ng-disabled="true" required/>
+                <input name="description" ng-model="alliance.description" ng-disabled="button" ng-init="button=true" required/>
             </div>
         </div>
     </form>
+    <hr>
+    <h3>Members</h3>
 </div>
