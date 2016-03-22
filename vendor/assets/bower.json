@@ -5,9 +5,10 @@
     "angular-route": "latest",
     "angular-ui-router": "latest",
     "angular-resource": "latest",
+    "ng-dialog": "latest",
     "bootstrap-sass-official": "latest"
   },
   "resolutions": {
-    "angular": "1.5.1"
+    "angular": "1.5.2"
   }
 }

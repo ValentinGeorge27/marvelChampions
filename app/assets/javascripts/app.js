@@ -1,10 +1,11 @@
 marvel = angular.module('marvel', [
     'ui.router',
     'templates',
-    'ngResource'
+    'ngResource',
+    'ngDialog'
     ]);
 
-marvel.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+marvel.config(['ngDialogProvider', '$stateProvider', '$urlRouterProvider', function(ngDialogProvide, $stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: '/',
@@ -30,20 +31,42 @@ marvel.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider,
             templateUrl: 'auth/_register.html',
             controller: 'AuthController'
         })
-        .state('home.allianceQuest', {
-            url: 'allianceQuest',
+        .state('alliance', {
+            url: '/alliance',
             views: {
-                'content@': {
+                'header': {
+                    templateUrl: 'nav/nav.html',
+                    controller: 'HomeController'
+                },
+                'content': {
+                    templateUrl: 'alliance/alliance_index.html'
+                }
+            },
+            data: { requireLogin: true }
+        })
+        .state('alliance.general', {
+            url: '/general',
+            views: {
+                'alliance-view': {
+                    templateUrl: 'alliance/general.html'
+                }
+            },
+            data: { requireLogin: true }
+        })
+        .state('alliance.allianceQuest', {
+            url: '/allianceQuest',
+            views: {
+                'alliance-view': {
                     templateUrl: 'alliance_quest/_mainQuest.html',
                     controller: 'QuestController'
                 }
             },
             data: { requireLogin: true }
         })
-        .state('home.allianceWar', {
-            url: 'allianceWar',
+        .state('alliance.allianceWar', {
+            url: '/allianceWar',
             views: {
-                'content@': {
+                'alliance-view': {
                     templateUrl: 'alliance_war/_mainWar.html',
                     controller: 'WarController'
                 }
@@ -66,6 +89,12 @@ marvel.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider,
                     templateUrl: 'user/time_availability.html'
                 }
             }
+        });
+
+        ngDialogProvide.setDefaults({
+            showClose: true,
+            closeByDocument: true,
+            closeByEscape: true
         });
 
 }])

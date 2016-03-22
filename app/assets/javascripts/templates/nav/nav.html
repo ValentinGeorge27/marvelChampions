@@ -7,8 +7,9 @@
             <div class="collapse navbar-collapse pull-right">
                 <ul class="nav navbar-nav">
                     <li><a href="">Heroes</a></li>
-                    <li><a ui-sref=".allianceQuest">Alliance Quest</a></li>
-                    <li><a ui-sref=".allianceWar">Alliance War</a></li>
+                    <li ng-if="status===false"><modal></modal></li>
+                    <li ng-if="status===true"><a ui-sref="alliance">Alliance</a></li>
+
                     <li><a href="">{{ user.username }}</a></li>
                     <li><a href="" ng-click="logout()">Log Out</a></li>
                 </ul>

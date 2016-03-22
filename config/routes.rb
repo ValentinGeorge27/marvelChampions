@@ -10,6 +10,12 @@ Rails.application.routes.draw do
     resources :time_availabilities, only: [:create, :index]
   end
 
+  resources :alliances do
+    collection do
+      get :check_alliance
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,22 @@
+<div class="alliance">
+    <form novalidate name="allianceForm">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-2">
+                <input name="name" ng-model="alliance.name" ng-disabled="true" required/><br><br>
+            </div>
+
+            <div class="col-md-1">
+                <input type="button" class="btn btn-success" value="Edit" />
+                <input type="button" class="btn btn-danger" value="Delete" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+                <input name="description" ng-model="alliance.description" ng-disabled="true" required/>
+            </div>
+        </div>
+    </form>
+</div>
