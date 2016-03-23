@@ -11,6 +11,7 @@ angular.module('marvel')
                         user_id: currentUser.id
                     }
                 }).success(function (resp) {
+                    localStorage.setItem('alliance', JSON.stringify(resp));
                     d.resolve(resp);
                 }).error(function (resp) {
                     d.resolve(resp);
@@ -24,6 +25,31 @@ angular.module('marvel')
                     user_id: currentUser.id
                 }).success(function (resp) {
                     localStorage.setItem('alliance', JSON.stringify(resp));
+                    d.resolve(resp);
+                }).error(function (resp) {
+                    d.resolve(resp);
+                });
+                return d.promise;
+            },
+            updateAlliance: function (alliance) {
+                var d = $q.defer();
+                $http.put('/alliances/'+alliance.id, {
+                    alliance: alliance
+                }).success(function (resp) {
+                    localStorage.setItem('alliance', JSON.stringify(resp));
+                    d.resolve(resp);
+                }).error(function (resp) {
+                    d.resolve(resp);
+                });
+                return d.promise;
+            },
+            getAllianceUsers: function () {
+                var d = $q.defer();
+                $http.get('/alliances/get_users',{
+                    params: {
+                        user_id: currentUser.id
+                    }
+                }).success(function (resp) {
                     d.resolve(resp);
                 }).error(function (resp) {
                     d.resolve(resp);

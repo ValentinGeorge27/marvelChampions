@@ -1,14 +1,18 @@
 angular.module('marvel')
-    .controller('AllianceController',['$scope', '$state', 'Alliance', 'AllianceService','errorService', function($scope, $state, allianceFactory, allianceService, errorService){
-        $scope.alliance = {name: '', description: '' };
+    .controller('AllianceController',['$scope', '$state', 'Alliance', 'AllianceService','errorService','notify',
+        function($scope, $state, allianceFactory, allianceService, errorService, notify){
+        $scope.alliance = allianceFactory;
+        $scope.alliance_users = [];
 
         allianceService.checkAlliance().then(function (response) {
             if(response.found === true) {
-                $scope.alliance.name = allianceService.currentAlliance().alliance.name;
-                $scope.alliance.description = allianceService.currentAlliance().alliance.description;
+                $scope.alliance.set(response.alliance);
             }
-            console.log('here');
-            console.log($scope.alliance);
+            allianceService.getAllianceUsers().then(function (response) {
+                angular.copy(response.users, $scope.alliance_users);
+            });
+            //question!
+            console.log($scope.alliance_users);
         });
 
         $scope.createAlliance = function(){
@@ -19,4 +23,10 @@ angular.module('marvel')
                 errorService.failure( data, status, $scope);
             });
         };
+
+        $scope.updateAlliance = function () {
+            allianceService.updateAlliance($scope.alliance).then(function () {
+                notify('Alliance updated');
+            })
+        }
     }]);

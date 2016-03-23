@@ -6,9 +6,10 @@
     "angular-ui-router": "latest",
     "angular-resource": "latest",
     "ng-dialog": "latest",
+    "angular-notify": "latest",
     "bootstrap-sass-official": "latest"
   },
   "resolutions": {
-    "angular": "1.5.2"
+    "angular": "^1.0.8"
   }
 }

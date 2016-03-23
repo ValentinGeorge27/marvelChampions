@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :alliances do
     collection do
       get :check_alliance
+      get :get_users
     end
   end
 

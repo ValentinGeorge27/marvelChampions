@@ -2,7 +2,8 @@ marvel = angular.module('marvel', [
     'ui.router',
     'templates',
     'ngResource',
-    'ngDialog'
+    'ngDialog',
+    'cgNotify'
     ]);
 
 marvel.config(['ngDialogProvider', '$stateProvider', '$urlRouterProvider', function(ngDialogProvide, $stateProvider, $urlRouterProvider) {

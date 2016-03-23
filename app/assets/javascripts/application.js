@@ -18,5 +18,5 @@
 //= require angular-route/angular-route
 //= require angular-rails-templates
 //= require ng-dialog
-
+//= require angular-notify
 //= require_tree .

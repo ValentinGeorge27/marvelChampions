@@ -18,6 +18,15 @@ class AlliancesController < ApplicationController
     end
   end
 
+  def update
+    alliance = Alliance.find(params[:id])
+    if alliance.update(alliance_params)
+      render json: { alliance: alliance }, status: 200
+    else
+      render json: { error: 'Update failed'}, status: 422
+    end
+  end
+
   def check_alliance
     user = User.find(user_id_param)
     if user.alliance.present?
@@ -30,9 +39,27 @@ class AlliancesController < ApplicationController
     end
   end
 
+  def get_users
+    user = User.find(user_id_param)
+    if user.alliance.present?
+      alliance = user.alliance
+      users = alliance.users.select(:id, :username).as_json
+      users.each do |user|
+        alliance_user = AllianceUser.where(user_id: user['id']).first
+        role = AllianceRole.find(alliance_user.alliance_role_id)
+        user['role'] = role.name
+      end
+      render json: {
+          users: users
+      }, status: 200
+    else
+      render json: { error: 'No users found' }, status: 404
+    end
+  end
+
   private
   def alliance_params
-    params.require(:alliance).permit(:name, :description)
+    params.require(:alliance).permit(:id, :name, :description)
   end
 
   def user_id_param

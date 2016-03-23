@@ -5,9 +5,14 @@ class TimeAvailabilitiesController < ApplicationController
 
   def index
     user = User.includes(:time_availabilities).find(params[:user_id])
-    render json: {
-        time: user.time_availabilities.first.time
-    }
+    if user.time_availabilities.present?
+      render json: {
+          time: user.time_availabilities.first.time
+      }, status: 200
+    else
+      render json: { error: 'Time is not set'}
+    end
+
   end
 
   def create

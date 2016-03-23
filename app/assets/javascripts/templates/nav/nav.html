@@ -8,7 +8,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="">Heroes</a></li>
                     <li ng-if="status===false"><modal></modal></li>
-                    <li ng-if="status===true"><a ui-sref="alliance">Alliance</a></li>
+                    <li ng-if="status===true"><a ui-sref="alliance.general">Alliance</a></li>
 
                     <li><a href="">{{ user.username }}</a></li>
                     <li><a href="" ng-click="logout()">Log Out</a></li>
