@@ -4,4 +4,8 @@
 asset 'angular'
 asset 'angular-route'
 asset 'angular-ui-router'
+asset 'angular-resource'
+asset 'ng-dialog'
+asset 'angular-notify'
+asset 'angular-modal-service'
 asset 'bootstrap-sass-official'

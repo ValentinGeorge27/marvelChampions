@@ -11,10 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160316123237) do
+ActiveRecord::Schema.define(version: 20160324140552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alliance_roles", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "alliance_users", force: :cascade do |t|
+    t.integer  "alliance_id",      null: false
+    t.integer  "user_id",          null: false
+    t.integer  "alliance_role_id", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "alliances", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "description"
+  end
 
   create_table "authentications", force: :cascade do |t|
     t.integer  "user_id",    null: false
@@ -25,6 +46,35 @@ ActiveRecord::Schema.define(version: 20160316123237) do
   end
 
   add_index "authentications", ["provider", "uid"], name: "index_authentications_on_provider_and_uid", using: :btree
+
+  create_table "notifications", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.string   "description", null: false
+    t.boolean  "seen",        null: false
+    t.integer  "user_id",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "alliance_id", null: false
+    t.integer  "types",       null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "roles_users", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "role_id", null: false
+  end
+
+  create_table "time_availabilities", force: :cascade do |t|
+    t.json     "time",       default: [],              array: true
+    t.integer  "user_id",                 null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                           null: false

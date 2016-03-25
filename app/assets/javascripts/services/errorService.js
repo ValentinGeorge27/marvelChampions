@@ -4,7 +4,6 @@ angular.module('marvel')
             success: function( data, status, success_message, $scope ) {
                 if (status == 201 || status == 204){
                     $scope.errors.message = success_message;
-                    $scope.reset_users();
                 } else {
                     if (data.error) {
                         $scope.errors.message = data.error;

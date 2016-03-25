@@ -18,11 +18,10 @@ angular.module('marvel')
             },
             logout: function(){
                 console.log('logout');
-                authToken.unset('auth_token');
                 authToken.unset('user');
+                authToken.unset('auth_token');
             },
             register: function(user){
-                authToken.unset();
                 var d = $q.defer();
                 $http.post('/users', {
                     user: user

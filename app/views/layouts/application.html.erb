@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
   <title>MarvelChampions</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body ng-app="marvel">
+  <div ui-view>
+    <div ui-view="header"></div>
+    <div ui-view="content"></div>
+  </div>
 </body>
 </html>
