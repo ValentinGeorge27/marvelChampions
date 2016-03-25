@@ -57,6 +57,19 @@ class AlliancesController < ApplicationController
     end
   end
 
+  def add_user
+    user = User.find_by_username(params[:username])
+    alliance = Alliance.find(params[:alliance_id])
+    if user.alliance.eql?alliance
+      render json: { success: 'The user already is in the alliance' }
+    elsif Notification.check_request(user.id, alliance.id)
+      user.notifications.create(name: 'Alliance invitation', description: alliance.name.to_s + ' has invited to join them', seen: false, alliance_id: alliance.id, types: 'request')
+      render json: {success: 'The request has been send'}
+    else
+      render json: {success: 'You already invited this user '}
+    end
+  end
+
   private
   def alliance_params
     params.require(:alliance).permit(:id, :name, :description)

@@ -1,19 +1,28 @@
 <header>
     <nav class="navbar navbar-default">
-        <div class="container">
+        <div class="container" ng-controller="HomeController">
             <div class="navbar-header">
                 <a class="navbar-brand" ui-sref="home">Champions</a>
             </div>
             <div class="collapse navbar-collapse pull-right">
+                <my-modal lolo="test" modal-title="title" modal-body="body" >
+                </my-modal>
                 <ul class="nav navbar-nav">
+                    <li ng-controller="NotificationController">
+                        <a ng-if="notifications.length === undefined || notifications.length === 0" href=""><span class="glyphicon glyphicon-bell"></span></a>
+                        <a ng-if="notifications.length > 0" href="" ng-click="showNotificationsModal()"><span class="user-notification">{{notifications.length}}</span></a>
+                     </li>
                     <li><a href="">Heroes</a></li>
-                    <li ng-if="status===false"><modal></modal></li>
+                    <li ng-if="status===false">
+                        <a href="" ng-click="createAllianceModal()">Create Alliance</a>
+                    </li>
                     <li ng-if="status===true"><a ui-sref="alliance.general">Alliance</a></li>
-
                     <li><a href="">{{ user.username }}</a></li>
                     <li><a href="" ng-click="logout()">Log Out</a></li>
                 </ul>
+
             </div>
         </div>
     </nav>
 </header>
+

@@ -18,7 +18,7 @@ angular.module('marvel')
                 });
                 return d.promise;
             },
-            createAlliance: function(alliance){
+            create: function(alliance){
                 var d = $q.defer();
                 $http.post('/alliances',{
                     alliance: alliance,
@@ -31,7 +31,7 @@ angular.module('marvel')
                 });
                 return d.promise;
             },
-            updateAlliance: function (alliance) {
+            update: function (alliance) {
                 var d = $q.defer();
                 $http.put('/alliances/'+alliance.id, {
                     alliance: alliance
@@ -48,6 +48,20 @@ angular.module('marvel')
                 $http.get('/alliances/get_users',{
                     params: {
                         user_id: currentUser.id
+                    }
+                }).success(function (resp) {
+                    d.resolve(resp);
+                }).error(function (resp) {
+                    d.resolve(resp);
+                });
+                return d.promise;
+            },
+            addUser: function (username, alliance_id) {
+                var d = $q.defer();
+                $http.get('/alliances/add_user',{
+                    params: {
+                        username: username,
+                        alliance_id: alliance_id
                     }
                 }).success(function (resp) {
                     d.resolve(resp);

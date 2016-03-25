@@ -7,6 +7,15 @@ Rails.application.routes.draw do
 
   post 'auth', to: 'auth#login'
   resources :users, only: [:create] do
+    collection do
+      get :check_email
+      get :check_username
+    end
+
+    member do
+      put :reject_request
+    end
+
     resources :time_availabilities, only: [:create, :index]
   end
 
@@ -14,6 +23,13 @@ Rails.application.routes.draw do
     collection do
       get :check_alliance
       get :get_users
+      get :add_user
+    end
+  end
+
+  resources :notifications, only: [:create] do
+    collection do
+      get :user_notifications
     end
   end
 

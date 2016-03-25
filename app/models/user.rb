@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   has_one :alliance_user, dependent: :destroy
   has_one :alliance, through: :alliance_user
 
+  has_many :notifications
+
   authenticates_with_sorcery!
 
   validates :username, presence: true, uniqueness: true

@@ -1,14 +1,22 @@
-<div class="ngdialog-content">
-    <h2>Create Alliance</h2>
-    <div ng-controller="AllianceController">
-        <form novalidate class="create-alliance">
-            <input type="text" name="name" ng-model="alliance.name" placeholder="Name" /><br><br>
-            <textarea cols="24" rows="3" type="text" name="description" ng-model="alliance.description" placeholder="Description"></textarea> <br><br>
-                <div class="ngdialog-buttons">
-                    <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click=closeThisDialog("Cancel")>Cancel</button>
-                    <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click=createAlliance()>Save</button>
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Create Alliance</h3>
+            </div>
+            <div class="modal-body">
+                <div ng-controller="AllianceController">
+                    <form novalidate class="create-alliance">
+                        <input type="text" name="name" ng-model="alliance.name" placeholder="Name" /><br><br>
+                        <textarea cols="24" rows="3" type="text" name="description" ng-model="alliance.description" placeholder="Description"></textarea> <br><br>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" ng-click=createAlliance()>Save</button>
+                        </div>
+                    </form>
                 </div>
-        </form>
+            </div>
+        </div>
     </div>
-
 </div>

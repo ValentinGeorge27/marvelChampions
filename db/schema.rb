@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322092540) do
+ActiveRecord::Schema.define(version: 20160324140552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(version: 20160322092540) do
   end
 
   add_index "authentications", ["provider", "uid"], name: "index_authentications_on_provider_and_uid", using: :btree
+
+  create_table "notifications", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.string   "description", null: false
+    t.boolean  "seen",        null: false
+    t.integer  "user_id",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "alliance_id", null: false
+    t.integer  "types",       null: false
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"

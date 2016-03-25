@@ -2,18 +2,17 @@ marvel = angular.module('marvel', [
     'ui.router',
     'templates',
     'ngResource',
-    'ngDialog',
-    'cgNotify'
+    'cgNotify',
+    'angularModalService'
     ]);
 
-marvel.config(['ngDialogProvider', '$stateProvider', '$urlRouterProvider', function(ngDialogProvide, $stateProvider, $urlRouterProvider) {
+marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: '/',
             views: {
                 'header': {
-                    templateUrl: 'nav/nav.html',
-                    controller: 'HomeController'
+                    templateUrl: 'nav/nav.html'
                 },
                 'content': {
                     templateUrl: 'user/user_index.html',
@@ -36,8 +35,7 @@ marvel.config(['ngDialogProvider', '$stateProvider', '$urlRouterProvider', funct
             url: '/alliance',
             views: {
                 'header': {
-                    templateUrl: 'nav/nav.html',
-                    controller: 'HomeController'
+                    templateUrl: 'nav/nav.html'
                 },
                 'content': {
                     templateUrl: 'alliance/alliance_index.html'
@@ -90,12 +88,6 @@ marvel.config(['ngDialogProvider', '$stateProvider', '$urlRouterProvider', funct
                     templateUrl: 'user/time_availability.html'
                 }
             }
-        });
-
-        ngDialogProvide.setDefaults({
-            showClose: true,
-            closeByDocument: true,
-            closeByEscape: true
         });
 
 }])
