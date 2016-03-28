@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
     member do
       put :reject_request
+      put :accept_request
     end
 
     resources :time_availabilities, only: [:create, :index]
@@ -23,7 +24,11 @@ Rails.application.routes.draw do
     collection do
       get :check_alliance
       get :get_users
-      get :add_user
+    end
+
+    member do
+      post :add_user
+      delete :kick_user
     end
   end
 

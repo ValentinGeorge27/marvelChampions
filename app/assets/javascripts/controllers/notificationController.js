@@ -1,7 +1,7 @@
 angular.module('marvel')
     .controller('NotificationController', [ '$scope', 'NotificationService','CurrentUser','ModalService','UserService', 'notify',
         function ($scope, notificationService, currentUser, ModalService, userService, notify) {
-            $scope.notifications= {};
+            $scope.notifications = {};
 
             notificationService.checkNotifications(currentUser.id).then(function (response) {
                 if(response.notifications.length != 0){
@@ -20,7 +20,21 @@ angular.module('marvel')
                     });
                 });
             };
+            
+            $scope.acceptRequest = function (notification_id) {
+                userService.acceptAllianceRequest(notification_id, currentUser.id).then(function (response) {
+                    if(response.success){
+                        console.log('test');
+                        console.log($scope.$parent.status.alliance);
+                        $scope.$parent.status.alliance = true;
+                        notify(response.success);
+                    }
+                    else
+                        notify(response.error);
 
+                })
+            };
+            
             $scope.rejectRequest = function (notification_id) {
                 userService.rejectAllianceRequest(notification_id, currentUser.id).then(function (response) {
                     if(response.success)

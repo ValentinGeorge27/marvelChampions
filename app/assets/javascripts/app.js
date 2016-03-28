@@ -3,7 +3,8 @@ marvel = angular.module('marvel', [
     'templates',
     'ngResource',
     'cgNotify',
-    'angularModalService'
+    'angularModalService',
+    'ngAnimate'
     ]);
 
 marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {

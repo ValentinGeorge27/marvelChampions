@@ -54,5 +54,13 @@ angular.module('marvel')
                     });
                 }else
                     notify('Cannot add null username');
-            }
+            };
+            $scope.kick_user = function (user_id) {
+                allianceService.kickUser(user_id, $scope.alliance.id).then(function (response) {
+                    if (response.success)
+                        notify(response.success);
+                    else
+                        notify(response.error);
+                })
+            };
     }]);

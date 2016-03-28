@@ -33,4 +33,16 @@ class Notification < ActiveRecord::Base
     end
   end
 
+  def self.accept_notification(notification_id)
+    notification = Notification.find(notification_id)
+    if notification
+      role = AllianceRole.find_by_name('member')
+      AllianceUser.assign_user_to_alliance(notification.user_id, notification.alliance_id, role.id)
+      return true
+    else
+      return false
+    end
+
+  end
+
 end

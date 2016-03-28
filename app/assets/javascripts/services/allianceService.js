@@ -58,15 +58,25 @@ angular.module('marvel')
             },
             addUser: function (username, alliance_id) {
                 var d = $q.defer();
-                $http.get('/alliances/add_user',{
-                    params: {
-                        username: username,
-                        alliance_id: alliance_id
-                    }
+                $http.post('/alliances/'+alliance_id+'/add_user',{
+                    username: username
                 }).success(function (resp) {
                     d.resolve(resp);
                 }).error(function (resp) {
                     d.resolve(resp);
+                });
+                return d.promise;
+            },
+            kickUser: function (user_id, alliance_id) {
+                var d = $q.defer();
+                $http.delete('/alliances/'+alliance_id+'/kick_user', {
+                    params: {
+                        user_id: user_id
+                    }
+                }).success(function (response) {
+                    d.resolve(response);
+                }).error(function (response) {
+                    d.resolve(response)
                 });
                 return d.promise;
             }

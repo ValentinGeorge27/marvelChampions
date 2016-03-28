@@ -13,10 +13,10 @@
                         <a ng-if="notifications.length > 0" href="" ng-click="showNotificationsModal()"><span class="user-notification">{{notifications.length}}</span></a>
                      </li>
                     <li><a href="">Heroes</a></li>
-                    <li ng-if="status===false">
+                    <li ng-if="status.alliance===false">
                         <a href="" ng-click="createAllianceModal()">Create Alliance</a>
                     </li>
-                    <li ng-if="status===true"><a ui-sref="alliance.general">Alliance</a></li>
+                    <li ng-if="status.alliance===true"><a ui-sref="alliance.general">Alliance</a></li>
                     <li><a href="">{{ user.username }}</a></li>
                     <li><a href="" ng-click="logout()">Log Out</a></li>
                 </ul>

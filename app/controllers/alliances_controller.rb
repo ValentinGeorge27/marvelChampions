@@ -59,7 +59,7 @@ class AlliancesController < ApplicationController
 
   def add_user
     user = User.find_by_username(params[:username])
-    alliance = Alliance.find(params[:alliance_id])
+    alliance = Alliance.find(params[:id])
     if user.alliance.eql?alliance
       render json: { success: 'The user already is in the alliance' }
     elsif Notification.check_request(user.id, alliance.id)
@@ -67,6 +67,21 @@ class AlliancesController < ApplicationController
       render json: {success: 'The request has been send'}
     else
       render json: {success: 'You already invited this user '}
+    end
+  end
+
+  def kick_user
+    user = User.find(user_id_param)
+    alliance = Alliance.find(params[:id])
+    user_alliance = AllianceUser.check_user(user.id,alliance.id)
+    if user_alliance
+      if user_alliance.first.delete
+        render json: { success: 'User kicked' }
+      else
+        render json: {error: 'User not kicked. Please try again later' }
+      end
+    else
+      render json: { error: 'User not found, you should not be here'}
     end
   end
 

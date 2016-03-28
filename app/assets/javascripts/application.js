@@ -21,4 +21,5 @@
 //= require ng-dialog
 //= require angular-modal-service
 //= require angular-notify
+//= require angular-animate
 //= require_tree .

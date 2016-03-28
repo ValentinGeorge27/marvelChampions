@@ -49,7 +49,7 @@
                         <td>
                             <input ng-if="user.role === 'member'" type="button" class="btn btn-default" value="Promote">
                             <input ng-if="user.role != 'member'" type="button" class="btn btn-default" value="Denode">
-                            <input type="button" class="btn btn-danger" value="Kick">
+                            <input type="button" class="btn btn-danger" ng-click="kick_user(user.id)" value="Kick">
                         </td>
                     </tr>
                 </tbody>
