@@ -1,6 +1,12 @@
 class User < ActiveRecord::Base
   has_many :roles_users
   has_many :roles, through: :roles_users
+  has_many :time_availabilities
+
+  has_one :alliance_user, dependent: :destroy
+  has_one :alliance, through: :alliance_user
+
+  has_many :notifications
 
   authenticates_with_sorcery!
 

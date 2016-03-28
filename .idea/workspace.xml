@@ -1,7 +1,423 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd129b4a-476a-462e-8742-eb34063a01ac" name="Default" comment="" />
+    <list default="true" id="fd129b4a-476a-462e-8742-eb34063a01ac" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/wpid-universe-wallpaper.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/notify_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/cache/autoprefixer-rails-6.3.4.gem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/cache/bitmask_attributes-1.0.0.gem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/cache/bootstrap-sass-3.3.6.gem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/apple-touch-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/i/arrows.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/i/results_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/i/tree_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/fonts/bootstrap/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/fonts/bootstrap/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/images/.keep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_node_mincer/apple-touch-icon-144-precomposed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/app/assets/images/.keep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/log/.keep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/constants/days.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/allianceController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/notificationController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/timeController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/userController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/directives/resetField.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/factories/alliance.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/factories/timeAvailability.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/services/allianceService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/services/authInterceptor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/services/notificationService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/services/timeAvaibabilityService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/services/userService.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/alliance/alliance_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/alliance/create_alliance_modal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/alliance/general.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/notifications/show_modal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/user/time_availability.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/user/user_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/user/user_nav.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/ng-app/alliance.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/ng-app/directive/modal.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/ng-app/notification.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/ng-app/time_table.css.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/alliances_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/notifications_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/time_availabilities_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/notifications_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/alliance.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/alliance_role.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/alliance_user.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/notification.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/time_availability.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20160318135622_create_time_availabilities.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20160321130113_create_alliances.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20160321132938_create_alliance_roles.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20160321133028_create_alliance_users.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20160322092540_add_column_to_alliance.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20160323144649_create_notifications.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20160324140552_add_aliance_id_to_notifications.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/controllers/alliances_controller_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/controllers/notifications_controller_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/alliance_roles.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/alliance_users.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/alliances.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/notifications.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/time_availabilities.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/helpers/notifications_helper_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/alliance_role_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/alliance_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/alliance_user_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/notification_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/time_availability_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-animate/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-animate/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-animate/angular-animate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-animate/angular-animate.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-animate/angular-animate.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-animate/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-animate/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-animate/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-modal-service/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-modal-service/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-modal-service/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-modal-service/TESTS-PhantomJS_1.9.8_(Mac_OS_X_0.0.0).xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-modal-service/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-modal-service/dst/angular-modal-service.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-modal-service/dst/angular-modal-service.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-modal-service/dst/angular-modal-service.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/angular-notify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/angular-notify.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/angular-notify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/dist/angular-notify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/dist/angular-notify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/dist/angular-notify.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-notify/dist/angular-notify.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-resource/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-resource/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-resource/angular-resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-resource/angular-resource.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-resource/angular-resource.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-resource/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-resource/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular-resource/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/css/ngDialog-custom-width.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/css/ngDialog-theme-default.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/css/ngDialog-theme-default.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/css/ngDialog-theme-plain.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/css/ngDialog-theme-plain.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/css/ngDialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/css/ngDialog.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/js/ngDialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/js/ngDialog.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/protractor.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/ng-dialog/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/.rspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/Gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/Rakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/autoprefixer-rails.gemspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/lib/autoprefixer-rails.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/lib/autoprefixer-rails/processor.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/lib/autoprefixer-rails/railtie.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/lib/autoprefixer-rails/result.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/lib/autoprefixer-rails/sprockets.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/lib/autoprefixer-rails/version.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/lib/rake/autoprefixer_tasks.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/shared.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/Rakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/app/assets/stylesheets/evaluate.css.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/app/assets/stylesheets/loaded.sass" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/app/assets/stylesheets/sass.sass" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/app/assets/stylesheets/test.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/app/assets/stylesheets/wrong.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/app/controllers/application_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/app/controllers/css_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/browserslist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/config.ru" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/config/application.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/config/autoprefixer.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/config/boot.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/config/environment.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/config/environments/test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/config/initializers/compress.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/config/initializers/secret_token.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/app/config/routes.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/autoprefixer_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/compass/config.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/compass/sass/screen.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/compass_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/processor_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/rails_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/spec/spec_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/sprockets2.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/sprockets3.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/sprockets4.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/autoprefixer-rails-6.3.4/vendor/autoprefixer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/.document" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/.rvmrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/Appraisals" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/CHANGELOG.rdoc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/Gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/README.rdoc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/Rakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/bitmask_attributes.gemspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/classes/BitmaskAttributes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/classes/BitmaskAttributes/ClassMethods.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/classes/BitmaskAttributes/Definition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/classes/BitmaskAttributes/ValueProxy.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/created.rid" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/css/github.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/css/panel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/files/CHANGELOG_rdoc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/files/README_rdoc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/files/lib/bitmask_attributes/definition_rb.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/files/lib/bitmask_attributes/value_proxy_rb.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/files/lib/bitmask_attributes/version_rb.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/files/lib/bitmask_attributes_rb.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/js/highlight.pack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/js/jquery-1.3.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/js/jquery-effect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/js/navigation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/js/search_index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/js/searchdoc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/js/searcher.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/panel/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/panel/links.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/doc/panel/tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/gemfiles/3.1.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/gemfiles/3.2.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/gemfiles/4.0.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/lib/bitmask_attributes.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/lib/bitmask_attributes/definition.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/lib/bitmask_attributes/value_proxy.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/lib/bitmask_attributes/version.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/test/bitmask_attributes/definition_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/test/bitmask_attributes_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/test/support/models.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bitmask_attributes-1.0.0/test/test_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/Gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/Rakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/fonts/bootstrap/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap-sprockets.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/affix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/alert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/button.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/collapse.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/dropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/modal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/popover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/scrollspy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/tab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/javascripts/bootstrap/transition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap-compass.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap-mincer.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap-sprockets.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_alerts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_badges.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_breadcrumbs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_button-groups.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_carousel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_close.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_code.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_component-animations.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_dropdowns.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_forms.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_glyphicons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_input-groups.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_jumbotron.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_labels.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_list-group.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_media.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_modals.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navbar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_navs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_normalize.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_pager.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_pagination.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_panels.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_popovers.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_print.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_progress-bars.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_responsive-embed.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_responsive-utilities.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_scaffolding.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_tables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_theme.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_thumbnails.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_tooltip.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_type.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_utilities.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/_wells.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_alerts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_background-variant.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_border-radius.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_center-block.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_clearfix.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_forms.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_gradients.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_grid-framework.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_grid.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_hide-text.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_image.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_labels.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_list-group.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_nav-divider.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_nav-vertical-align.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_opacity.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_pagination.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_panels.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_progress-bar.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_reset-filter.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_reset-text.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_resize.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_size.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_tab-focus.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_table-row.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_text-overflow.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/bootstrap-sass.gemspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/lib/bootstrap-sass.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/lib/bootstrap-sass/engine.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/lib/bootstrap-sass/version.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/sache.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/tasks/bower.rake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/tasks/converter.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/tasks/converter/char_string_scanner.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/tasks/converter/fonts_conversion.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/tasks/converter/js_conversion.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/tasks/converter/less_conversion.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/tasks/converter/logger.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/tasks/converter/network.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/templates/project/_bootstrap-variables.sass" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/templates/project/manifest.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/templates/project/styles.sass" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/compass_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/compilation_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_node_mincer/application.css.ejs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_node_mincer/manifest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/README.rdoc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/Rakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/app/assets/javascripts/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/app/assets/stylesheets/application.sass" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/app/controllers/application_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/app/controllers/pages_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/app/helpers/application_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/app/views/layouts/application.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/app/views/pages/root.html.slim" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config.ru" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/application.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/boot.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/environment.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/environments/development.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/environments/production.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/environments/test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/initializers/backtrace_silencers.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/initializers/filter_parameter_logging.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/initializers/inflections.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/initializers/mime_types.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/initializers/secret_token.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/initializers/session_store.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/initializers/wrap_parameters.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/locales/en.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/locales/es.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_rails/config/routes.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_sass_only/Gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_sass_only/compile.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/dummy_sass_only/import_all.sass" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/gemfiles/rails_head.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/gemfiles/sass_3_3.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/gemfiles/sass_3_4.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/gemfiles/sass_head.gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/node_mincer_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/node_sass_compile_test.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/pages_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/sass_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/sprockets_rails_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/support/dummy_rails_integration.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/support/reporting.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/test_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/gems/bootstrap-sass-3.3.6/test/test_helper_rails.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/specifications/autoprefixer-rails-6.3.4.gemspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/specifications/bitmask_attributes-1.0.0.gemspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bundle/specifications/bootstrap-sass-3.3.6.gemspec" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Development__marvelChampions.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Production__marvelChampions.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/spec__marvelChampions.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/test__marvelChampions.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/javascripts/services/authToken.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/factories/authToken.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.min.js.gzip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/marvelChampions.iml" afterPath="$PROJECT_DIR$/.idea/marvelChampions.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bowerfile" afterPath="$PROJECT_DIR$/Bowerfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/app.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/controllers/homeController.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/controllers/homeController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/templates/nav/nav.html" afterPath="$PROJECT_DIR$/app/assets/javascripts/templates/nav/nav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/auth_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/auth_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/bower.json" afterPath="$PROJECT_DIR$/vendor/assets/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular/angular.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/vendor/assets/bower_components/angular/package.json" />
+    </list>
     <ignored path="marvelChampions.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -34,7 +450,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -43,22 +459,39 @@
       <file leaf-file-name="nav.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/nav/nav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25">
-              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homeController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/homeController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12711865">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-              <folding>
-                <marker date="1459166136157" expanded="true" signature="338:347" placeholder="{...}" />
-                <marker date="1459166136157" expanded="true" signature="338:354" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bowerfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Bowerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,7 +537,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/authController.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/auth/_register.html" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/homeController.js" />
         <option value="$PROJECT_DIR$/app/views/users/show.json.erb" />
         <option value="$PROJECT_DIR$/app/controllers/auth_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
@@ -114,6 +546,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/nav/nav.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/app.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/templates/user/profile.html" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/controllers/homeController.js" />
       </list>
     </option>
   </component>
@@ -160,9 +593,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -171,126 +601,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="marvelChampions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,16 +614,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/assets/images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/assets/javascripts/templates/auth" />
-      <recent name="$PROJECT_DIR$/app/assets/javascripts/templates" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Rails.Development: marvelChampions">
+  <component name="RunManager">
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -382,7 +687,7 @@
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -486,17 +791,8 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Rails.Production: marvelChampions" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Development: marvelChampions" />
-      <item index="2" class="java.lang.String" itemvalue="Rake.test: marvelChampions" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.spec: marvelChampions" />
-    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fd129b4a-476a-462e-8742-eb34063a01ac" name="Default" comment="" />
@@ -508,16 +804,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1020" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286334" sideWeight="0.49585405" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18850194" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3438178" sideWeight="0.4936429" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19071311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5063571" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -525,9 +818,12 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286334" sideWeight="0.49585405" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3438178" sideWeight="0.4936429" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -545,18 +841,10 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25067386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34391534" sideWeight="0.4936429" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34391534" sideWeight="0.4936429" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -566,6 +854,46 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/nav/nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/homeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bowerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/auth/_login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -648,7 +976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -656,15 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bowerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,7 +1004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,7 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,7 +1026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,14 +1033,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/templates/nav/nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -735,19 +1047,32 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/controllers/homeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12711865">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding>
-            <marker date="1459166136157" expanded="true" signature="338:347" placeholder="{...}" />
-            <marker date="1459166136157" expanded="true" signature="338:354" placeholder="{...}" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bowerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -50,7 +50,9 @@ end
 gem 'sorcery'
 gem 'jwt'
 
-
 gem 'bower-rails'
 gem 'angular-rails-templates'
+gem 'bootstrap-sass'
+
+gem 'bitmask_attributes'
 

@@ -1,0 +1,33 @@
+<div ng-controller="TimeController">
+    <div class="container">
+        <div class="col-md-8"><h4>Time Table</h4></div>
+        <div class="col-md-4">
+            <input type="button" class="btn btn-info" ng-click="saveTime()" value="Save"/>
+        </div>
+    </div>
+    <hr>
+    <div class="table-responsive col-xs-12 col-sm-6 col-md-8 time-table">
+        <table class="table table-bordered">
+            <colgroup span="8"></colgroup>
+
+            <tbody>
+            <tr class="days">
+                <th>Hours/Days</th>
+                <th scope="col" ng-repeat="day in days">
+                    {{day}}
+                </th>
+            </tr>
+            <tr ng-repeat="hour in hours" >
+                <td>
+                   {{hour}}
+                </td>
+                <td ng-repeat="day in days">
+                    <input type="button" style="width:100%;" class="btn {{findInTime(hour, day) ? 'btn-danger' : 'btn-success' }}"
+                           ng-click="toggleActive(hour, day)" />
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+</div>

@@ -4,6 +4,14 @@
     "angular": "latest",
     "angular-route": "latest",
     "angular-ui-router": "latest",
+    "angular-resource": "latest",
+    "ng-dialog": "latest",
+    "angular-notify": "latest",
+    "angular-modal-service": "latest",
+    "angular-animate": "latest",
     "bootstrap-sass-official": "latest"
+  },
+  "resolutions": {
+    "angular": "1.5.3"
   }
 }

@@ -1,0 +1,12 @@
+Gemfile.lock
+gemfiles/*.lock
+*.sw?
+.DS_Store
+coverage
+rdoc
+pkg
+\#*
+.#*
+*.gem
+/nbproject
+.idea/

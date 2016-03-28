@@ -1,19 +1,22 @@
 marvel = angular.module('marvel', [
     'ui.router',
-    'templates'
+    'templates',
+    'ngResource',
+    'cgNotify',
+    'angularModalService',
+    'ngAnimate'
     ]);
 
-marvel.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: '/',
             views: {
                 'header': {
-                    templateUrl: 'nav/nav.html',
-                    controller: 'HomeController'
+                    templateUrl: 'nav/nav.html'
                 },
-                'content@': {
-                    templateUrl: 'user/profile.html',
+                'content': {
+                    templateUrl: 'user/user_index.html',
                     controller: 'HomeController'
                 }
             },
@@ -29,25 +32,63 @@ marvel.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider,
             templateUrl: 'auth/_register.html',
             controller: 'AuthController'
         })
-        .state('home.allianceQuest', {
-            url: 'allianceQuest',
+        .state('alliance', {
+            url: '/alliance',
             views: {
-                'content@': {
+                'header': {
+                    templateUrl: 'nav/nav.html'
+                },
+                'content': {
+                    templateUrl: 'alliance/alliance_index.html'
+                }
+            },
+            data: { requireLogin: true }
+        })
+        .state('alliance.general', {
+            url: '/general',
+            views: {
+                'alliance-view': {
+                    templateUrl: 'alliance/general.html'
+                }
+            },
+            data: { requireLogin: true }
+        })
+        .state('alliance.allianceQuest', {
+            url: '/allianceQuest',
+            views: {
+                'alliance-view': {
                     templateUrl: 'alliance_quest/_mainQuest.html',
                     controller: 'QuestController'
                 }
             },
             data: { requireLogin: true }
         })
-        .state('home.allianceWar', {
-            url: 'allianceWar',
+        .state('alliance.allianceWar', {
+            url: '/allianceWar',
             views: {
-                'content@': {
+                'alliance-view': {
                     templateUrl: 'alliance_war/_mainWar.html',
                     controller: 'WarController'
                 }
             },
             data: { requireLogin: true }
+        })
+        .state('home.profile', {
+            url: 'user/profile',
+            views: {
+                'user-view':{
+                    templateUrl: 'user/profile.html',
+                    controller: 'UserController'
+                }
+            }
+        })
+        .state('home.time_availability', {
+            url: 'user/time_availability',
+            views: {
+                'user-view':{
+                    templateUrl: 'user/time_availability.html'
+                }
+            }
         });
 
 }])
