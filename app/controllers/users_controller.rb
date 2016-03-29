@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     end
   end
 
+  #TODO server email verification
   def check_email
 
   end
@@ -40,10 +41,22 @@ class UsersController < ApplicationController
 
   def accept_request
     if Notification.accept_notification(notification_id_param)
+      alliance = Alliance.find(Notification.find(notification_id_param).alliance_id)
       Notification.delete_notification(notification_id_param)
-      render json: { success: 'Congrats' }
+      render json: {
+          success: 'Congrats',
+          alliance: alliance
+      }
     else
       render json: { error: 'We could not add you to alliance. Please try again later' }
+    end
+  end
+
+  def leave_alliance
+    if AllianceUser.kick_user(params[:id], params[:alliance_id])
+      render json: { success: 'You left alliance' }
+    else
+      render json: { error: 'There was a problem, please try again later' }
     end
   end
 

@@ -1,20 +1,19 @@
 angular.module('marvel')
-    .controller('AllianceController',['$scope', '$state', 'Alliance', 'AllianceService','errorService','notify', 'UserService',
-        function($scope, $state, allianceFactory, allianceService, errorService, notify, userService){
+    .controller('AllianceController',['$scope', '$state', 'Alliance', 'AllianceService','errorService','notify', 'UserService','CurrentUser',
+        function($scope, $state, allianceFactory, allianceService, errorService, notify, userService, currentUser){
             $scope.alliance = allianceFactory;
             $scope.alliance_users = [];
 
             $scope.found_user = false;
+            $scope.currentUser = currentUser;
 
-            allianceService.checkAlliance().then(function (response) {
-                if(response.found === true) {
-                    $scope.alliance.set(response.alliance);
-                }
-                allianceService.getAllianceUsers().then(function (response) {
-                    angular.copy(response.users, $scope.alliance_users);
-                });
-                //question!
-                console.log($scope.alliance_users);
+            if(allianceService.currentAlliance() !== undefined)
+            {
+                $scope.alliance = allianceService.currentAlliance();
+            }
+
+            allianceService.getAllianceUsers($scope.currentUser.id).then(function (response) {
+                angular.copy(response.users, $scope.alliance_users);
             });
 
             $scope.createAlliance = function(){
@@ -60,6 +59,15 @@ angular.module('marvel')
                     if (response.success)
                         notify(response.success);
                     else
+                        notify(response.error);
+                })
+            };
+            $scope.leave_alliance = function (user_id) {
+                userService.leaveAlliance(user_id, $scope.alliance.id).then(function (response) {
+                    if (response.success){
+                        notify(response.success);
+                        $state.go('home');
+                    } else
                         notify(response.error);
                 })
             };

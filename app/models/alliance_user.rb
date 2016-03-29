@@ -18,4 +18,17 @@ class AllianceUser < ActiveRecord::Base
     AllianceUser.where(user_id: user_id, alliance_id: alliance_id)
   end
 
+  def self.kick_user(user_id, alliance_id)
+    alliance_user = check_user(user_id, alliance_id)
+    if alliance_user
+      if alliance_user.first.delete
+        true
+      else
+        false
+      end
+    else
+      false
+    end
+  end
+
 end

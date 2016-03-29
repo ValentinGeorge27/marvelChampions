@@ -6,10 +6,10 @@ angular.module('marvel')
             $scope.status = {
                 alliance: false
             };
-            allianceService.checkAlliance().then(function (response) {
-                console.log(allianceService.currentAlliance());
-                $scope.status.alliance = response.found;
-            });
+            if(allianceService.currentAlliance() !== null)
+                $scope.status.alliance = true;
+            else
+                $scope.status.alliance = false;
 
             $scope.createAllianceModal= function () {
                 ModalService.showModal({

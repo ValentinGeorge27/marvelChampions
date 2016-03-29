@@ -20,7 +20,7 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
                     controller: 'HomeController'
                 }
             },
-            data: { requireLogin: true }
+            access: { requireLogin: true }
         })
         .state('login', {
             url: '/login',
@@ -42,7 +42,7 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
                     templateUrl: 'alliance/alliance_index.html'
                 }
             },
-            data: { requireLogin: true }
+            access: { requireLogin: true }
         })
         .state('alliance.general', {
             url: '/general',
@@ -51,7 +51,7 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
                     templateUrl: 'alliance/general.html'
                 }
             },
-            data: { requireLogin: true }
+            access: { requireLogin: true }
         })
         .state('alliance.allianceQuest', {
             url: '/allianceQuest',
@@ -61,7 +61,7 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
                     controller: 'QuestController'
                 }
             },
-            data: { requireLogin: true }
+            access: { requireLogin: true }
         })
         .state('alliance.allianceWar', {
             url: '/allianceWar',
@@ -71,7 +71,7 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
                     controller: 'WarController'
                 }
             },
-            data: { requireLogin: true }
+            access: { requireLogin: true }
         })
         .state('home.profile', {
             url: 'user/profile',
@@ -80,7 +80,8 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
                     templateUrl: 'user/profile.html',
                     controller: 'UserController'
                 }
-            }
+            },
+            access: { requireLogin: true }
         })
         .state('home.time_availability', {
             url: 'user/time_availability',
@@ -88,14 +89,17 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
                 'user-view':{
                     templateUrl: 'user/time_availability.html'
                 }
-            }
+            },
+            access: { requireLogin: true }
         });
 
-}])
+        $urlRouterProvider.otherwise('login');
+
+    }])
     .run(['$rootScope', '$location', '$state', 'CurrentUser', function($rootScope, $location, $state, currentUser){
         $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams){
 
-            var shouldLogin = toState.data !== undefined && currentUser && toState.data.requireLogin;
+            var shouldLogin = currentUser === undefined && toState.data.requireLogin;
 
             if(shouldLogin){
                 $state.go('login');

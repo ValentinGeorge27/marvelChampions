@@ -30,9 +30,12 @@ class AlliancesController < ApplicationController
   def check_alliance
     user = User.find(user_id_param)
     if user.alliance.present?
+      alliance_user = AllianceUser.where(user_id: user.id).first
+      role = AllianceRole.find(alliance_user.alliance_role_id)
       render json: {
           found: true,
-          alliance: user.alliance
+          alliance: user.alliance,
+          user_role: role.name
       }, status: 200
     else
       render json: {found: false}, status:200
@@ -71,17 +74,10 @@ class AlliancesController < ApplicationController
   end
 
   def kick_user
-    user = User.find(user_id_param)
-    alliance = Alliance.find(params[:id])
-    user_alliance = AllianceUser.check_user(user.id,alliance.id)
-    if user_alliance
-      if user_alliance.first.delete
-        render json: { success: 'User kicked' }
-      else
-        render json: {error: 'User not kicked. Please try again later' }
-      end
+    if AllianceUser.kick_user(user_id_param, params[:id])
+      render json: { success: 'User kicked' }
     else
-      render json: { error: 'User not found, you should not be here'}
+      render json: { error: 'User not kicked, try again later'}
     end
   end
 
