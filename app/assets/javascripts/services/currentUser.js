@@ -13,10 +13,9 @@ angular.module('marvel')
                    localStorage.removeItem('alliance');
                 }
             });
-
         }
         else
-            user = undefined;
+            localStorage.removeItem('user');
 
         return user;
     }]);

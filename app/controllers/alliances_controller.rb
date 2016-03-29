@@ -81,6 +81,54 @@ class AlliancesController < ApplicationController
     end
   end
 
+  def promote_user
+    requester_user = AllianceUser.check_user(params[:requester_id], params[:id]).first
+    alliance_user = AllianceUser.check_user(user_id_param, params[:id]).first
+
+    if requester_user.have_roles? %w(owner leadership)
+      if alliance_user.have_roles? %w(member)
+        role = AllianceRole.find_by_name('leadership')
+        if AllianceUser.assign_user_to_alliance(user_id_param, params[:id], role.id)
+          user = User.select(:id, :username).find(alliance_user.user_id).as_json
+          user['role'] = role.name
+          render json: {
+              user: user,
+              success: 'User rank updated' }
+        else
+          render json: { error: "The user couldn't be updated. Please try again later" }
+        end
+      else
+        render json: {error: "The user can't be updated, his rank is higher that member"}
+      end
+    else
+      render json: {error: 'The request does not have permission to upgrade' }
+    end
+  end
+
+  def demote_user
+    requester_user = AllianceUser.check_user(params[:requester_id], params[:id]).first
+    alliance_user = AllianceUser.check_user(user_id_param, params[:id]).first
+
+    if requester_user.have_roles? %w(owner leadership)
+      if alliance_user.have_roles? %w(leadership)
+        role = AllianceRole.find_by_name('member')
+        if AllianceUser.assign_user_to_alliance(user_id_param, params[:id], role.id)
+          user = User.select(:id, :username).find(alliance_user.user_id).as_json
+          user['role'] = role.name
+          render json: {
+              user: user,
+              success: 'User rank updated' }
+        else
+          render json: { error: "The user couldn't be updated. Please try again later" }
+        end
+      else
+        render json: {error: "The user can't be updated, his rank is lower that leadership"}
+      end
+    else
+      render json: {error: 'The request does not have permission to upgrade' }
+    end
+  end
+
   private
   def alliance_params
     params.require(:alliance).permit(:id, :name, :description)

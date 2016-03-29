@@ -6,9 +6,9 @@ class AllianceUser < ActiveRecord::Base
   def self.assign_user_to_alliance(user_id, alliance_id, role_id)
     alliance_user = check_user(user_id, alliance_id)
     if alliance_user.present?
-      alliance_user.alliance_id = alliance_id
-      alliance_user.alliance_role_id = role_id
-      alliance_user.save
+      alliance_user.first.alliance_id = alliance_id
+      alliance_user.first.alliance_role_id = role_id
+      alliance_user.first.save
     else
       AllianceUser.create(user_id: user_id, alliance_id: alliance_id, alliance_role_id: role_id)
     end
@@ -29,6 +29,10 @@ class AllianceUser < ActiveRecord::Base
     else
       false
     end
+  end
+
+  def have_roles?(roles)
+    roles.include? self.alliance_role.name
   end
 
 end

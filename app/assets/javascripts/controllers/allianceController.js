@@ -1,11 +1,24 @@
 angular.module('marvel')
-    .controller('AllianceController',['$scope', '$state', 'Alliance', 'AllianceService','errorService','notify', 'UserService','CurrentUser',
-        function($scope, $state, allianceFactory, allianceService, errorService, notify, userService, currentUser){
+    .controller('AllianceController',['$scope', '$state', 'Alliance', 'AllianceService','errorService','notify', 'UserService','CurrentUser', 'ModalService',
+        function($scope, $state, allianceFactory, allianceService, errorService, notify, userService, currentUser, ModalService){
             $scope.alliance = allianceFactory;
             $scope.alliance_users = [];
 
             $scope.found_user = false;
             $scope.currentUser = currentUser;
+            $scope.selectedUser = {};
+
+            $scope.changeOwnerModal = function () {
+                ModalService.showModal({
+                    templateUrl: 'alliance/change_owner_modal.html',
+                    controller: 'AllianceController'
+                }).then(function(modal){
+                    modal.element.modal();
+                    modal.close.then(function (result) {
+                        console.log(result);
+                    });
+                });
+            };
 
             if(allianceService.currentAlliance() !== undefined)
             {
@@ -62,6 +75,36 @@ angular.module('marvel')
                         notify(response.error);
                 })
             };
+
+            $scope.promote_user = function (user_id, index) {
+                allianceService.promoteUser(currentUser.id, user_id, $scope.alliance.id).then(function (response) {
+                    if(response.success) {
+                        notify(response.success);
+                        $scope.alliance_users[index] = response.user;
+                    }else
+                        notify(response.error);
+                })
+            };
+
+            $scope.demote_user = function (user_id, index) {
+                allianceService.demoteUser(currentUser.id, user_id, $scope.alliance.id).then(function (response) {
+                    if(response.success) {
+                        notify(response.success);
+                        $scope.alliance_users[index] = response.user;
+                    }else
+                        notify(response.error);
+                })
+            };
+            $scope.change_owner = function (user_id, index) {
+                allianceService.changeOwner(currentUser.id, user_id, $scope.alliance.id).then(function (response) {
+                    if(response.success) {
+                        notify(response.success);
+                        $scope.alliance_users[index] = response.user;
+                    }else
+                        notify(response.error);
+                })
+            };
+
             $scope.leave_alliance = function (user_id) {
                 userService.leaveAlliance(user_id, $scope.alliance.id).then(function (response) {
                     if (response.success){

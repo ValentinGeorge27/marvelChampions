@@ -70,6 +70,42 @@ angular.module('marvel')
                 });
                 return d.promise;
             },
+            promoteUser: function (currentUser_id, user_id, alliance_id) {
+                var d = $q.defer();
+                $http.put('/alliances/'+alliance_id+'/promote_user',{
+                    requester_id: currentUser_id,
+                    user_id: user_id
+                }).success(function (resp) {
+                    d.resolve(resp);
+                }).error(function (resp) {
+                    d.resolve(resp);
+                });
+                return d.promise;
+            },
+            demoteUser: function (currentUser_id, user_id, alliance_id) {
+                var d = $q.defer();
+                $http.put('/alliances/'+alliance_id+'/demote_user',{
+                    requester_id: currentUser_id,
+                    user_id: user_id
+                }).success(function (resp) {
+                    d.resolve(resp);
+                }).error(function (resp) {
+                    d.resolve(resp);
+                });
+                return d.promise;
+            },
+            changeOwner: function (currentUser_id, user_id, alliance_id) {
+                var d = $q.defer();
+                $http.put('/alliances/'+alliance_id+'/demote_user',{
+                    requester_id: currentUser_id,
+                    user_id: user_id
+                }).success(function (resp) {
+                    d.resolve(resp);
+                }).error(function (resp) {
+                    d.resolve(resp);
+                });
+                return d.promise;
+            },
             kickUser: function (user_id, alliance_id) {
                 var d = $q.defer();
                 $http.delete('/alliances/'+alliance_id+'/kick_user', {
