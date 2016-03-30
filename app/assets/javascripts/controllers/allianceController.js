@@ -1,6 +1,6 @@
 angular.module('marvel')
-    .controller('AllianceController',['$scope', '$state', 'Alliance', 'AllianceService','errorService','notify', 'UserService','CurrentUser', 'ModalService',
-        function($scope, $state, allianceFactory, allianceService, errorService, notify, userService, currentUser, ModalService){
+    .controller('AllianceController',['$scope', '$state', '$filter', 'Alliance', 'AllianceService','errorService','notify', 'UserService','CurrentUser', 'ModalService',
+        function($scope, $state, $filter, allianceFactory, allianceService, errorService, notify, userService, currentUser, ModalService){
             $scope.alliance = allianceFactory;
             $scope.alliance_users = [];
 
@@ -95,11 +95,14 @@ angular.module('marvel')
                         notify(response.error);
                 })
             };
-            $scope.change_owner = function (user_id, index) {
-                allianceService.changeOwner(currentUser.id, user_id, $scope.alliance.id).then(function (response) {
+            $scope.change_owner = function (username) {
+                var selected_team_lead= $filter('filter')($scope.alliance_users, function (d) {
+                    return d.username = username;
+                })[0];
+                allianceService.changeOwner(currentUser.id, selected_team_lead.id, $scope.alliance.id).then(function (response) {
                     if(response.success) {
                         notify(response.success);
-                        $scope.alliance_users[index] = response.user;
+                        $state.go('alliance.general');
                     }else
                         notify(response.error);
                 })

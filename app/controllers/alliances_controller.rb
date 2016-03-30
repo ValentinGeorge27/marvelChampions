@@ -81,51 +81,48 @@ class AlliancesController < ApplicationController
     end
   end
 
-  def promote_user
-    requester_user = AllianceUser.check_user(params[:requester_id], params[:id]).first
-    alliance_user = AllianceUser.check_user(user_id_param, params[:id]).first
+  def change_user_role
+    role, new_role = {}
+    member_role= AllianceRole.find_by_name('member')
+    lead_role = AllianceRole.find_by_name('leadership')
 
-    if requester_user.have_roles? %w(owner leadership)
-      if alliance_user.have_roles? %w(member)
-        role = AllianceRole.find_by_name('leadership')
-        if AllianceUser.assign_user_to_alliance(user_id_param, params[:id], role.id)
-          user = User.select(:id, :username).find(alliance_user.user_id).as_json
-          user['role'] = role.name
-          render json: {
-              user: user,
-              success: 'User rank updated' }
-        else
-          render json: { error: "The user couldn't be updated. Please try again later" }
-        end
-      else
-        render json: {error: "The user can't be updated, his rank is higher that member"}
+    if params[:role]
+      if params[:role].eql?'promote'
+        role = member_role
+        new_role = lead_role
+      elsif params[:role].eql?'demode'
+        role = lead_role
+        new_role = member_role
       end
-    else
-      render json: {error: 'The request does not have permission to upgrade' }
     end
+    response = AllianceUser.change_role(params[:requester_id], user_id_param, params[:id], role, new_role)
+    puts response
+    render json: response
   end
 
-  def demote_user
+  def change_owner
     requester_user = AllianceUser.check_user(params[:requester_id], params[:id]).first
     alliance_user = AllianceUser.check_user(user_id_param, params[:id]).first
 
     if requester_user.have_roles? %w(owner leadership)
       if alliance_user.have_roles? %w(leadership)
-        role = AllianceRole.find_by_name('member')
-        if AllianceUser.assign_user_to_alliance(user_id_param, params[:id], role.id)
-          user = User.select(:id, :username).find(alliance_user.user_id).as_json
-          user['role'] = role.name
-          render json: {
-              user: user,
-              success: 'User rank updated' }
+        role = AllianceRole.find_by_name('owner')
+        if AllianceUser.assign_user_to_alliance(alliance_user.user_id, alliance_user.alliance_id, role.id)
+          lead_role = AllianceRole.find_by_name('leadership')
+          if AllianceUser.assign_user_to_alliance(requester_user.user_id,requester_user.alliance_id, lead_role.id )
+            render json: { success: 'Owner changed' }
+          else
+            AllianceUser.assign_user_to_alliance(alliance_user.user_id, alliance_user.alliance_id, lead_role.id)
+            render json: { error: 'We cannot denode owner.' }
+          end
         else
-          render json: { error: "The user couldn't be updated. Please try again later" }
+          render json: {error: 'We cannot make him owner. Please try again later'}
         end
       else
-        render json: {error: "The user can't be updated, his rank is lower that leadership"}
+        render json: { error: "User isn't in leadership" }
       end
     else
-      render json: {error: 'The request does not have permission to upgrade' }
+      render json: {error: "You don't have permission to change owner"}
     end
   end
 

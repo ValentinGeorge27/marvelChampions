@@ -72,9 +72,10 @@ angular.module('marvel')
             },
             promoteUser: function (currentUser_id, user_id, alliance_id) {
                 var d = $q.defer();
-                $http.put('/alliances/'+alliance_id+'/promote_user',{
+                $http.put('/alliances/'+alliance_id+'/change_user_role',{
                     requester_id: currentUser_id,
-                    user_id: user_id
+                    user_id: user_id,
+                    role: 'promote'
                 }).success(function (resp) {
                     d.resolve(resp);
                 }).error(function (resp) {
@@ -84,9 +85,10 @@ angular.module('marvel')
             },
             demoteUser: function (currentUser_id, user_id, alliance_id) {
                 var d = $q.defer();
-                $http.put('/alliances/'+alliance_id+'/demote_user',{
+                $http.put('/alliances/'+alliance_id+'/change_user_role',{
                     requester_id: currentUser_id,
-                    user_id: user_id
+                    user_id: user_id,
+                    role: 'demode'
                 }).success(function (resp) {
                     d.resolve(resp);
                 }).error(function (resp) {
@@ -96,7 +98,7 @@ angular.module('marvel')
             },
             changeOwner: function (currentUser_id, user_id, alliance_id) {
                 var d = $q.defer();
-                $http.put('/alliances/'+alliance_id+'/demote_user',{
+                $http.put('/alliances/'+alliance_id+'/change_owner',{
                     requester_id: currentUser_id,
                     user_id: user_id
                 }).success(function (resp) {

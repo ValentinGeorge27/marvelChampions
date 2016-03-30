@@ -30,8 +30,8 @@ Rails.application.routes.draw do
     member do
       post :add_user
       delete :kick_user
-      put :promote_user
-      put :demote_user
+      put :change_user_role
+      put :change_owner
     end
   end
 
