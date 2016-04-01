@@ -1,21 +1,21 @@
 <div class="alliance">
     <div class="alliance-form">
-        <form novalidate name="allianceForm">
+        <form novalidate name="allianceForm" ng-init="button=true">
             <div class="row">
                 <div class="col-md-4">
-                    <input name="name" ng-model="alliance.name" ng-disabled="button" ng-init="button=true" required/><br><br>
+                    <input name="name" ng-model="alliance.name" ng-disabled="button==true" required/><br><br>
                 </div>
 
-                <div class="col-md-6">
+                <div restrict access="owner leadership" class="col-md-6">
                     <input ng-hide="button" type="button" class="btn btn-success" ng-click="updateAlliance(); button=true" value="Save" />
                     <input ng-hide="button" type="button" class="btn btn-success" ng-click="button=true" value="Cancel" />
                     <input ng-show="button" type="button" class="btn btn-success" ng-click="button=false" value="Edit" />
-                    <input type="button" class="btn btn-danger pull-right" value="Delete" />
+                    <input restrict access="owner" type="button" class="btn btn-danger pull-right" value="Delete" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <textarea cols="50" name="description" ng-model="alliance.description" ng-disabled="button" ng-init="button=true" required>{{alliance.description}}</textarea>
+                    <textarea cols="50" name="description" ng-model="alliance.description" ng-disabled="button" required>{{alliance.description}}</textarea>
                 </div>
             </div>
         </form>
@@ -23,12 +23,12 @@
     <hr>
     <div class="users-table">
         <h3>Members</h3>
-        <div class="row">
+        <div restrict access="owner leadership" class="row">
             <div class="col-md-6">
                 <input type="text" class="" ng-blur="checkUsername(username)" ng-model="username" placeholder="Username" resetField />
-
                 <input type="button" ng-disabled="!found_user" class="btn btn-default" ng-click="add_user(username)" value="Add new member"/>
             </div>
+            <input restrict access="owner" type="button" class="btn btn-default" ng-click="changeOwnerModal()" value="Change owner"/>
         </div>
         <hr>
         <div class="table-responsive">
@@ -46,10 +46,11 @@
                         <td>{{$index+1}}</td>
                         <td>{{user.username}}</td>
                         <td>{{user.role}}</td>
-                        <td>
-                            <input ng-if="user.role === 'member'" type="button" class="btn btn-default" value="Promote">
-                            <input ng-if="user.role != 'member'" type="button" class="btn btn-default" value="Denode">
-                            <input type="button" class="btn btn-danger" value="Kick">
+                        <td >
+                            <input restrict access="owner leadership" ng-if="user.role === 'member'" type="button" class="btn btn-default" ng-click="promote_user(user.id, $index)" value="Promote">
+                            <input restrict access="owner leadership" ng-if="user.role !== 'member' && user.role !=='owner'" type="button" class="btn btn-default" ng-click="demote_user(user.id, $index)" value="Demode">
+                            <input restrict access="owner leadership" ng-if="user.role !== 'owner'" type="button" class="btn btn-danger" ng-click="kick_user(user.id)" value="Kick">
+                            <input restrict access="member" ng-if="currentUser.id === user.id" type="button" class="btn btn-danger" ng-click="leave_alliance(user.id)" value="Leave">
                         </td>
                     </tr>
                 </tbody>

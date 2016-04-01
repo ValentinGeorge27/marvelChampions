@@ -8,6 +8,10 @@
     "ng-dialog": "latest",
     "angular-notify": "latest",
     "angular-modal-service": "latest",
+    "angular-animate": "latest",
     "bootstrap-sass-official": "latest"
+  },
+  "resolutions": {
+    "angular": "1.5.3"
   }
 }

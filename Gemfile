@@ -55,4 +55,7 @@ gem 'angular-rails-templates'
 gem 'bootstrap-sass'
 
 gem 'bitmask_attributes'
+gem 'dotenv-rails'
+
+gem 'marvelite'
 

@@ -1,20 +1,32 @@
 angular.module('marvel')
-    .controller('AllianceController',['$scope', '$state', 'Alliance', 'AllianceService','errorService','notify', 'UserService',
-        function($scope, $state, allianceFactory, allianceService, errorService, notify, userService){
+    .controller('AllianceController',['$scope', '$state', '$filter', 'Alliance', 'AllianceService','errorService','notify', 'UserService','CurrentUser', 'ModalService',
+        function($scope, $state, $filter, allianceFactory, allianceService, errorService, notify, userService, currentUser, ModalService){
             $scope.alliance = allianceFactory;
             $scope.alliance_users = [];
 
             $scope.found_user = false;
+            $scope.currentUser = currentUser;
+            $scope.selectedUser = {};
 
-            allianceService.checkAlliance().then(function (response) {
-                if(response.found === true) {
-                    $scope.alliance.set(response.alliance);
-                }
-                allianceService.getAllianceUsers().then(function (response) {
-                    angular.copy(response.users, $scope.alliance_users);
+            $scope.changeOwnerModal = function () {
+                ModalService.showModal({
+                    templateUrl: 'alliance/change_owner_modal.html',
+                    controller: 'AllianceController'
+                }).then(function(modal){
+                    modal.element.modal();
+                    modal.close.then(function (result) {
+                        console.log(result);
+                    });
                 });
-                //question!
-                console.log($scope.alliance_users);
+            };
+
+            if(allianceService.currentAlliance() !== undefined)
+            {
+                $scope.alliance = allianceService.currentAlliance();
+            }
+
+            allianceService.getAllianceUsers($scope.currentUser.id).then(function (response) {
+                angular.copy(response.users, $scope.alliance_users);
             });
 
             $scope.createAlliance = function(){
@@ -54,5 +66,55 @@ angular.module('marvel')
                     });
                 }else
                     notify('Cannot add null username');
-            }
+            };
+            $scope.kick_user = function (user_id) {
+                allianceService.kickUser(user_id, $scope.alliance.id).then(function (response) {
+                    if (response.success)
+                        notify(response.success);
+                    else
+                        notify(response.error);
+                })
+            };
+
+            $scope.promote_user = function (user_id, index) {
+                allianceService.promoteUser(currentUser.id, user_id, $scope.alliance.id).then(function (response) {
+                    if(response.success) {
+                        notify(response.success);
+                        $scope.alliance_users[index] = response.user;
+                    }else
+                        notify(response.error);
+                })
+            };
+
+            $scope.demote_user = function (user_id, index) {
+                allianceService.demoteUser(currentUser.id, user_id, $scope.alliance.id).then(function (response) {
+                    if(response.success) {
+                        notify(response.success);
+                        $scope.alliance_users[index] = response.user;
+                    }else
+                        notify(response.error);
+                })
+            };
+            $scope.change_owner = function (username) {
+                var selected_team_lead= $filter('filter')($scope.alliance_users, function (d) {
+                    return d.username = username;
+                })[0];
+                allianceService.changeOwner(currentUser.id, selected_team_lead.id, $scope.alliance.id).then(function (response) {
+                    if(response.success) {
+                        notify(response.success);
+                        $state.go('alliance.general');
+                    }else
+                        notify(response.error);
+                })
+            };
+
+            $scope.leave_alliance = function (user_id) {
+                userService.leaveAlliance(user_id, $scope.alliance.id).then(function (response) {
+                    if (response.success){
+                        notify(response.success);
+                        $state.go('home');
+                    } else
+                        notify(response.error);
+                })
+            };
     }]);

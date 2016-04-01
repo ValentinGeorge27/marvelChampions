@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     end
   end
 
+  #TODO server email verification
   def check_email
 
   end
@@ -31,18 +32,42 @@ class UsersController < ApplicationController
   end
 
   def reject_request
-    if Notification.delete_notification(params[:notification_id])
+    if Notification.delete_notification(notification_id_param)
       render json: {success: 'Request rejected'}
     else
       render json: { error: "Request couldn't be processed, please try again later" }
     end
+  end
 
+  def accept_request
+    if Notification.accept_notification(notification_id_param)
+      alliance = Alliance.find(Notification.find(notification_id_param).alliance_id)
+      Notification.delete_notification(notification_id_param)
+      render json: {
+          success: 'Congrats',
+          alliance: alliance
+      }
+    else
+      render json: { error: 'We could not add you to alliance. Please try again later' }
+    end
+  end
+
+  def leave_alliance
+    if AllianceUser.kick_user(params[:id], params[:alliance_id])
+      render json: { success: 'You left alliance' }
+    else
+      render json: { error: 'There was a problem, please try again later' }
+    end
   end
 
   private
 
   def users_params
     params.require(:user).permit(:email,:username,:password)
+  end
+
+  def notification_id_param
+    params.require 'notification_id'
   end
 
 end

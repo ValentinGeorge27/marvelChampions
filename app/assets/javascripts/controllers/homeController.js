@@ -3,11 +3,13 @@ angular.module('marvel')
         function($scope, $state, currentUser, AuthService, allianceService, notificationService, ModalService){
             $scope.user = currentUser;
 
-            $scope.status = false;
-            allianceService.checkAlliance().then(function (response) {
-                console.log(allianceService.currentAlliance());
-                $scope.status = response.found;
-            });
+            $scope.status = {
+                alliance: false
+            };
+            if(allianceService.currentAlliance() !== null)
+                $scope.status.alliance = true;
+            else
+                $scope.status.alliance = false;
 
             $scope.createAllianceModal= function () {
                 ModalService.showModal({

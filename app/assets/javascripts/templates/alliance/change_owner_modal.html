@@ -1,0 +1,25 @@
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Change owner</h3>
+            </div>
+            <form novalidate class="change-owner">
+                <div class="modal-body">
+
+                    Select Member:
+                    <select ng-model="selected_user">
+                            <option ng-repeat="user in alliance_users | filter:{role: 'leadership'}:true">{{user.username}}</option>
+                    </select>
+                    <br>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="button" class="btn btn-success" ng-click="change_owner(selected_user)" value="Change owner"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
