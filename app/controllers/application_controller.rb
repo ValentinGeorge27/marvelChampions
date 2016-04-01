@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     begin
       TokenProvider.valid?(token)
     rescue
-      error!('Unauthorized', 401)
+      render json: {error: 'Unauthorized'}, status: 401
     end
   end
 
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
       payload, header = TokenProvider.valid?(token)
       @current_user = User.find_by(id: payload['user_id'])
     rescue
-      error!('Unauthorized', 401)
+      render json: {error: 'Unauthorized'}, status: 401
     end
   end
 

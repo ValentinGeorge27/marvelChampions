@@ -44,11 +44,7 @@ class AllianceUser < ActiveRecord::Base
   def self.kick_user(user_id, alliance_id)
     alliance_user = check_user(user_id, alliance_id)
     if alliance_user
-      if alliance_user.first.delete
-        true
-      else
-        false
-      end
+       alliance_user.first.delete ? true : false
     else
       false
     end

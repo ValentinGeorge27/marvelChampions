@@ -2,7 +2,6 @@ angular.module('marvel')
     .directive('restrict', ['CurrentUser', function (currentUser) {
         return {
             restrict: 'A',
-            priority: 100000,
             scope: false,
             link: function ($scope, element, attr) {
                     var accessDenied = true;

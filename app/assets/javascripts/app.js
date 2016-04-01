@@ -99,6 +99,7 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
     .run(['$rootScope', '$location', '$state', 'CurrentUser', function($rootScope, $location, $state, currentUser){
         $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams){
 
+
             var shouldLogin = currentUser === undefined && toState.data.requireLogin;
 
             if(shouldLogin){

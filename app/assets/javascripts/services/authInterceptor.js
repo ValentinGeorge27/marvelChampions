@@ -1,5 +1,5 @@
 angular.module('marvel')
-    .factory("AuthInterceptor", function($q, $injector) {
+    .factory("AuthInterceptor", ['$q', '$injector', function($q, $injector) {
         return {
             // This will be called on every outgoing http request
             request: function(config) {
@@ -25,9 +25,7 @@ angular.module('marvel')
                 return $q.reject(response);
             }
         };
-    });
-
-angular.module('marvel')
+    }])
     .config(function($httpProvider) {
         return $httpProvider.interceptors.push("AuthInterceptor");
     });

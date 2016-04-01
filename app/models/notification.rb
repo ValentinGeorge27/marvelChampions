@@ -7,15 +7,10 @@ class Notification < ActiveRecord::Base
   def self.check_request(user_id, alliance_id)
     notification = Notification.where(user_id: user_id, alliance_id: alliance_id).first
     if notification
-      if notification.types?(:request)
-        return false
-      else
-        return true
-      end
+       notification.types?(:request) ? false : true
     else
       return true
     end
-
   end
 
   def self.check_user_notifications(user_id)
