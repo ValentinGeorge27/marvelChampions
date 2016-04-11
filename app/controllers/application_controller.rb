@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    @current_user ||= authenticate!
+    @current_user
   end
 
   def token

@@ -14,12 +14,12 @@
 //= require jquery_ujs
 //= require angular/angular
 //= require bootstrap
-//= require angular-resource
 //= require angular-ui-router
 //= require angular-route/angular-route
 //= require angular-rails-templates
 //= require ng-dialog
-//= require angular-modal-service
 //= require angular-notify
 //= require angular-animate
+//= require websocket_rails/main
 //= require_tree .
+

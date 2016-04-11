@@ -1,23 +1,39 @@
 angular.module('marvel')
-    .controller('NotificationController', [ '$scope', 'NotificationService','CurrentUser','ModalService','UserService', 'notify',
-        function ($scope, notificationService, currentUser, ModalService, userService, notify) {
-            $scope.notifications = {};
-
-            notificationService.checkNotifications(currentUser.id).then(function (response) {
+    .controller('NotificationController', [ '$scope', 'NotificationService','CurrentUser','ModalService','UserService', 'notify', 'SocketService',
+        function ($scope, notificationService, currentUser, modalService, userService, notify, socketService) {
+            $scope.notifications = [];
+            /*notificationService.checkNotifications(currentUser.id).then(function (response) {
                 if(response.notifications.length != 0){
                     $scope.notifications = response.notifications;
                 }
+            });*/
+            var object_to_send = { data: currentUser.id };
+            socketService.trigger('notifications.check', object_to_send);
+
+            socketService.bind('notifications', function (data) {
+
+                $scope.$apply(function () {
+                    $scope.notifications = data.notifications;
+                });
+                console.log('received');
+                console.log($scope.notifications);
             });
 
+            var channel = socketService.subscribe('notif');
+            channel.bind('new_notifications', function (data) {
+                console.log('new-not');
+                $scope.$apply(function () {
+                    $scope.notifications = data.notifications;
+                });
+                console.log($scope.notifications);
+            });
+
+            console.log('Aloha');
+            console.log($scope.notifications);
+
             $scope.showNotificationsModal = function () {
-                ModalService.showModal({
-                    templateUrl: 'notifications/show_modal.html',
-                    controller: 'NotificationController'
-                }).then(function(modal){
-                    modal.element.modal();
-                    modal.close.then(function (result) {
-                        console.log(result);
-                    });
+                modalService.open({
+                    templateUrl: 'notifications/show_modal.html'
                 });
             };
             

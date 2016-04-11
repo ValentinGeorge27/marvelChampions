@@ -1,9 +1,7 @@
 marvel = angular.module('marvel', [
     'ui.router',
     'templates',
-    'ngResource',
     'cgNotify',
-    'angularModalService',
     'ngAnimate'
     ]);
 

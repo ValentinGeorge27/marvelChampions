@@ -1,0 +1,29 @@
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/hiredis-0.6.1/ext/hiredis_ext
+/home/ggainat/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20160404-7654-mkj7qc.rb extconf.rb
+checking for sys/socket.h... yes
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  net.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  hiredis.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  sds.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  async.c
+cc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  read.c
+ar rcs libhiredis.a net.o hiredis.o sds.o async.o read.o
+checking for rb_thread_fd_select()... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/extensions/x86_64-linux/2.2.0/hiredis-0.6.1/mkmf.log
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/hiredis-0.6.1/ext/hiredis_ext
+make "DESTDIR=" clean
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/hiredis-0.6.1/ext/hiredis_ext
+make "DESTDIR="
+compiling connection.c
+compiling hiredis_ext.c
+compiling reader.c
+linking shared-object hiredis/ext/hiredis_ext.so
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/hiredis-0.6.1/ext/hiredis_ext
+make "DESTDIR=" install
+/usr/bin/install -m 0755 hiredis_ext.so ./.gem.20160404-7654-1hxdfn/hiredis/ext
