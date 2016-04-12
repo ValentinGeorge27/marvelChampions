@@ -6,7 +6,6 @@ angular.module('marvel')
 
             $scope.found_user = false;
             $scope.currentUser = currentUser;
-            $scope.selectedUser = {};
 
             $scope.changeOwnerModal = function () {
                 modalService.open({

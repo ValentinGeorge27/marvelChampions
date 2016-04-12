@@ -16,7 +16,7 @@ angular.module('marvel')
                 var AuthEvents = $injector.get('AuthEvents');
                 var matchesAuthenticatePath = response.config && response.config.url.match(new RegExp('/auth'));
                 if (!matchesAuthenticatePath) {
-                    $injector.get('$rootScope').$broadcast({
+                    $injector.get('$rootScope').$emit({
                         401: AuthEvents.notAuthenticated,
                         403: AuthEvents.notAuthorized,
                         419: AuthEvents.sessionTimeout

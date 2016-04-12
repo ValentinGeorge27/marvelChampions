@@ -23,12 +23,14 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
         .state('login', {
             url: '/login',
             templateUrl: 'auth/_login.html',
-            controller: 'AuthController'
+            controller: 'AuthController',
+            access: { requireLogin: false }
         })
         .state('register', {
             url: '/register',
             templateUrl: 'auth/_register.html',
-            controller: 'AuthController'
+            controller: 'AuthController',
+            access: { requireLogin: false }
         })
         .state('alliance', {
             url: '/alliance',
@@ -94,22 +96,29 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
         $urlRouterProvider.otherwise('login');
 
     }])
-    .run(['$rootScope', '$location', '$state', 'CurrentUser', function($rootScope, $location, $state, currentUser){
+    .run(['$rootScope', '$location', '$state', 'CurrentUser', 'AuthEvents', function($rootScope, $location, $state, currentUser, AuthEvents){
         $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams){
 
-
-            var shouldLogin = currentUser === undefined && toState.data.requireLogin;
-
-            if(shouldLogin){
-                $state.go('login');
-                /*event.preventDefault();*/
+            if(toState.access.requireLogin !== undefined && toState.access.requireLogin){
+                console.log('test');
+                $rootScope.$on(AuthEvents.loginFailed, function () {
+                    console.log('here');
+                    if(currentUser !== undefined){
+                        currentUser.remove();
+                    }
+                    console.log(currentUser);
+                    event.preventDefault();
+                    $state.go('login');
+                });
+                $rootScope.$on(AuthEvents.notAuthenticated, function () {
+                    if(currentUser !== undefined){
+                        currentUser.remove();
+                    }
+                    console.log(currentUser);
+                    event.preventDefault();
+                    $state.go('login');
+                })
             }
-            /*if(currentUser !== null){
-                if(toState.name === 'login')
-                {
-                    $state.go('home');
-                }
-            }*/
         })
     }]);
 

@@ -1,4 +1,5 @@
 class AlliancesController < ApplicationController
+  before_action :authenticate!
 
   def create
     alliance = Alliance.new(alliance_params)

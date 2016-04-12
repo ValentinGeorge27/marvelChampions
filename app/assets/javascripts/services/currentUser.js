@@ -17,5 +17,11 @@ angular.module('marvel')
         else
             localStorage.removeItem('user');
 
+        user.remove = function () {
+            localStorage.removeItem('auth_token');
+            localStorage.removeItem('user');
+            localStorage.removeItem('alliance');
+        };
+
         return user;
     }]);
