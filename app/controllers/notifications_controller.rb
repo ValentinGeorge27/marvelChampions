@@ -1,13 +1,20 @@
-class NotificationsController < ApplicationController
+class NotificationsController < WebsocketRails::BaseController
+  skip_before_action :authenticate!
+
+  def initialize_session
+    controller_store[:message_count] = 0
+  end
 
   def user_notifications
-    unseen_notifications = Notification.check_user_notifications(user_id_params)
-    if unseen_notifications
-      render json: {
-          notifications: unseen_notifications
-      }
+    unseen_notifications = Notification.check_user_notifications(message)
+    puts 'test'
+    puts unseen_notifications.as_json
+    no_notification_message = { message: 'No new notifications' }
+    notifications = { notifications: unseen_notifications.as_json }
+    if unseen_notifications.present?
+      send_message :notifications, notifications
     else
-      render json: { success: 'There are no new notifications' }
+      send_message :no_notifications, no_notification_message
     end
   end
 

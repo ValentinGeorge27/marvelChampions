@@ -1,16 +1,14 @@
 angular.module('marvel')
-    .controller('TimeController', ['$scope', 'Days', 'TimeAvailability', 'TimeAvailabilityService','notify',
-        function($scope, days, timeAvailability, timeAvailabilityService, notify){
-        $scope.hours = [];
-        for(var i=0;i<24;i++){
-            $scope.hours.push(i+'-'+(i+1));
-        }
+    .controller('TimeController', ['$scope', 'Days', 'Hours', 'TimeAvailability', 'TimeAvailabilityService','notify',
+        function($scope, days, hours, timeAvailability, timeAvailabilityService, notify){
+        $scope.hours = hours;
         $scope.days= days;
 
         $scope.time = [];
 
         timeAvailabilityService.getTime().then(function(response){
-            $scope.time = response.time;
+            if(response.time !== undefined)
+                $scope.time = response.time;
         });
 
         $scope.toggleActive = function(hour, day){

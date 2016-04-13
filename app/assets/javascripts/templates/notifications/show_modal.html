@@ -1,28 +1,25 @@
-<div class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3>Notifications</h3>
+<div class="header">
+    <h3>Notifications</h3>
+</div>
+<hr>
+<div class="body notifications">
+    <div ng-controller="NotificationController">
+
+        <div ng-repeat="notification in notifications">
+            <div class="row">
+                {{notification.name}}
             </div>
-            <div class="modal-body notifications">
-                <div ng-repeat="notification in notifications">
-                    <div class="row">
-                        {{notification.name}}
-                    </div>
-                    <div class="row">
-                        {{notification.description}}
-                    </div>
-                    <div class="row pull-right">
-                        <a href="" ng-click="acceptRequest(notification.id)"><span class="glyphicon glyphicon-ok"></span></a>
-                        <a href="" ng-click="rejectRequest(notification.id);"><span class="glyphicon glyphicon-remove"></span></a>
-                    </div>
-                </div>
+            <div class="row">
+                {{notification.description}}
             </div>
-            <br>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <div class="row pull-right">
+                <a href="" ng-click="acceptRequest(notification.id)"><span class="glyphicon glyphicon-ok"></span></a>
+                <a href="" ng-click="rejectRequest(notification.id);"><span class="glyphicon glyphicon-remove"></span></a>
             </div>
         </div>
     </div>
+</div>
+<hr>
+<div class="footer">
+    <button type="button" class="btn btn-default" ng-click="modalIns.modalService.close()">Close</button>
 </div>

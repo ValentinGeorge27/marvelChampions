@@ -1,0 +1,20 @@
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/eventmachine-1.2.0.1/ext/fastfilereader
+/home/ggainat/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20160404-7654-1ju444q.rb extconf.rb
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/extensions/x86_64-linux/2.2.0/eventmachine-1.2.0.1/mkmf.log
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/eventmachine-1.2.0.1/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/eventmachine-1.2.0.1/ext/fastfilereader
+make "DESTDIR="
+compiling rubymain.cpp
+compiling mapper.cpp
+linking shared-object fastfilereaderext.so
+
+current directory: /home/ggainat/RailsProjects/marvelChampions/vendor/bundle/gems/eventmachine-1.2.0.1/ext/fastfilereader
+make "DESTDIR=" install
+/usr/bin/install -m 0755 fastfilereaderext.so ./.gem.20160404-7654-w7qakk

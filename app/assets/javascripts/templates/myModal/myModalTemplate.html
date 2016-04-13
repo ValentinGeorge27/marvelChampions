@@ -1,0 +1,9 @@
+<div class="ng-modal" ng-show="modalIns.modalService.shouldShow">
+    <div class="ng-modal-overlay" ng-click=""></div>
+    <div class="ng-modal-dialog">
+        <button type="button" class="close" aria-hidden="true" ng-click="modalIns.modalService.close()">&times;</button>
+        <div class="ng-modal-dialog-content">
+            <div ng-include src="modalIns.modalService.template"></div>
+        </div>
+    </div>
+</div>

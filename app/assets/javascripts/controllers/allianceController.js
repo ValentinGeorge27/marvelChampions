@@ -1,22 +1,15 @@
 angular.module('marvel')
-    .controller('AllianceController',['$scope', '$state', '$filter', 'Alliance', 'AllianceService','errorService','notify', 'UserService','CurrentUser', 'ModalService',
-        function($scope, $state, $filter, allianceFactory, allianceService, errorService, notify, userService, currentUser, ModalService){
+    .controller('AllianceController',['$scope', '$state', '$filter', 'Alliance', 'AllianceService','errorService','notify', 'UserService','CurrentUser', 'ModalService', 'AllianceRoles',
+        function($scope, $state, $filter, allianceFactory, allianceService, errorService, notify, userService, currentUser, modalService, roles){
             $scope.alliance = allianceFactory;
             $scope.alliance_users = [];
 
             $scope.found_user = false;
             $scope.currentUser = currentUser;
-            $scope.selectedUser = {};
 
             $scope.changeOwnerModal = function () {
-                ModalService.showModal({
-                    templateUrl: 'alliance/change_owner_modal.html',
-                    controller: 'AllianceController'
-                }).then(function(modal){
-                    modal.element.modal();
-                    modal.close.then(function (result) {
-                        console.log(result);
-                    });
+                modalService.open({
+                    templateUrl: 'alliance/change_owner_modal.html'
                 });
             };
 
@@ -25,9 +18,13 @@ angular.module('marvel')
                 $scope.alliance = allianceService.currentAlliance();
             }
 
-            allianceService.getAllianceUsers($scope.currentUser.id).then(function (response) {
-                angular.copy(response.users, $scope.alliance_users);
-            });
+            if($scope.alliance) {
+                allianceService.getAllianceUsers($scope.currentUser.id).then(function (response) {
+                    angular.copy(response.users, $scope.alliance_users);
+                    $scope.alliance_users = $filter('orderBy')($scope.alliance_users, 'role', roles);
+                    console.log($scope.alliance_users);
+                });
+            }
 
             $scope.createAlliance = function(){
                 allianceService.create($scope.alliance).then(function () {

@@ -59,3 +59,6 @@ gem 'dotenv-rails'
 
 gem 'marvelite'
 
+gem 'websocket-rails'
+gem 'faye-websocket', '0.10.0'
+

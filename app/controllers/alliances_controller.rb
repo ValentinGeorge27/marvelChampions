@@ -66,7 +66,10 @@ class AlliancesController < ApplicationController
     if user.alliance.eql?alliance
       render json: { success: 'The user already is in the alliance' }
     elsif Notification.check_request(user.id, alliance.id)
-      user.notifications.create(name: 'Alliance invitation', description: alliance.name.to_s + ' has invited to join them', seen: false, alliance_id: alliance.id, types: 'request')
+      notification = user.notifications.create(name: 'Alliance invitation', description: alliance.name.to_s + ' has invited to join them', seen: false, alliance_id: alliance.id, types: 'request')
+      not_arr = []
+      not_arr << notification
+      WebsocketRails[:notif].trigger 'new_notifications', { notifications: not_arr.as_json }
       render json: {success: 'The request has been send'}
     else
       render json: {success: 'You already invited this user '}
@@ -128,7 +131,7 @@ class AlliancesController < ApplicationController
 
   private
   def alliance_params
-    params.require(:alliance).permit(:id, :name, :description)
+    params.require(:alliance).permit(:id, :name, :description, :created_at, :updated_at)
   end
 
   def user_id_param

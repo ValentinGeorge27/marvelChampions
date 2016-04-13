@@ -1,5 +1,5 @@
 angular.module('marvel')
-    .service('AllianceService', ['$q', '$http', function($q, $http){
+    .service('AllianceService', ['$q', '$http','SocketService', function($q, $http, socketService){
         return {
             currentAlliance: function () {
                 return angular.fromJson(localStorage.getItem('alliance'));
@@ -61,6 +61,7 @@ angular.module('marvel')
             },
             addUser: function (username, alliance_id) {
                 var d = $q.defer();
+
                 $http.post('/alliances/'+alliance_id+'/add_user',{
                     username: username
                 }).success(function (resp) {

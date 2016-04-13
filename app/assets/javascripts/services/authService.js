@@ -8,10 +8,9 @@ angular.module('marvel')
                     password: password
                 }).success(function(resp) {
                     authToken.set(resp.auth_token, resp.user);
-                    $rootScope.$broadcast(AuthEvents.loginSuccess);
                     d.resolve(resp.user);
                 }).error(function(resp) {
-                    $rootScope.$broadcast(AuthEvents.loginFailed);
+                    $rootScope.$emit(AuthEvents.loginFailed);
                     d.reject(resp);
                 });
                 return d.promise;
@@ -27,10 +26,9 @@ angular.module('marvel')
                     user: user
                 }).success(function(resp) {
                     authToken.set(resp.auth_token, resp.user);
-                    $rootScope.$broadcast(AuthEvents.loginSuccess);
                     d.resolve(resp.user);
                 }).error(function(resp) {
-                    $rootScope.$broadcast(AuthEvents.loginFailed);
+                    $rootScope.$emit(AuthEvents.loginFailed);
                     d.reject(resp.error);
                 });
                 return d.promise;

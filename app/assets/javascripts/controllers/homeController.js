@@ -1,6 +1,6 @@
 angular.module('marvel')
     .controller('HomeController', ['$scope', '$state', 'CurrentUser','AuthService', 'AllianceService', 'NotificationService', 'ModalService',
-        function($scope, $state, currentUser, AuthService, allianceService, notificationService, ModalService){
+        function($scope, $state, currentUser, AuthService, allianceService, notificationService, modalService){
             $scope.user = currentUser;
 
             $scope.status = {
@@ -12,14 +12,8 @@ angular.module('marvel')
                 $scope.status.alliance = false;
 
             $scope.createAllianceModal= function () {
-                ModalService.showModal({
-                    templateUrl: 'alliance/create_alliance_modal.html',
-                    controller: 'AllianceController'
-                }).then(function(modal){
-                    modal.element.modal();
-                    modal.close.then(function (result) {
-                        console.log(result);
-                    });
+                modalService.open({
+                    templateUrl: 'alliance/create_alliance_modal.html'
                 });
             };
 
