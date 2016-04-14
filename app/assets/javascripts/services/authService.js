@@ -19,6 +19,7 @@ angular.module('marvel')
                 console.log('logout');
                 authToken.unset('user');
                 authToken.unset('auth_token');
+                $rootScope.$emit(AuthEvents.loginSuccess);
             },
             register: function(user){
                 var d = $q.defer();
