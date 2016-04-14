@@ -96,17 +96,15 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
         $urlRouterProvider.otherwise('login');
 
     }])
-    .run(['$rootScope', '$location', '$state', 'CurrentUser', 'AuthEvents', function($rootScope, $location, $state, currentUser, AuthEvents){
-        $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams){
+    .run(['$rootScope', '$location', '$state', 'CurrentUser', 'AuthEvents','AuthToken', function($rootScope, $location, $state, currentUser, AuthEvents, AuthToken){
+        $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
 
             if(toState.access.requireLogin !== undefined && toState.access.requireLogin){
-                console.log('test');
                 $rootScope.$on(AuthEvents.loginFailed, function () {
                     console.log('here');
                     if(currentUser !== undefined){
                         currentUser.remove();
                     }
-                    console.log(currentUser);
                     event.preventDefault();
                     $state.go('login');
                 });
@@ -114,10 +112,13 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
                     if(currentUser !== undefined){
                         currentUser.remove();
                     }
-                    console.log(currentUser);
                     event.preventDefault();
                     $state.go('login');
-                })
+                });
+                if(AuthToken.get('auth_token') === undefined || AuthToken.get('auth_token') === null){
+                    event.preventDefault();
+                    $state.go('login');
+                }
             }
         })
     }]);
