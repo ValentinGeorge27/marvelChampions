@@ -22,7 +22,6 @@ angular.module('marvel')
                 allianceService.getAllianceUsers($scope.currentUser.id).then(function (response) {
                     angular.copy(response.users, $scope.alliance_users);
                     $scope.alliance_users = $filter('orderBy')($scope.alliance_users, 'role', roles);
-                    console.log($scope.alliance_users);
                 });
             }
 

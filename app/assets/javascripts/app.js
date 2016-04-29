@@ -98,10 +98,8 @@ marvel.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
     }])
     .run(['$rootScope', '$location', '$state', 'CurrentUser', 'AuthEvents','AuthToken', function($rootScope, $location, $state, currentUser, AuthEvents, AuthToken){
         $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
-
             if(toState.access.requireLogin !== undefined && toState.access.requireLogin){
                 $rootScope.$on(AuthEvents.loginFailed, function () {
-                    console.log('here');
                     if(currentUser !== undefined){
                         currentUser.remove();
                     }

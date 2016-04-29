@@ -1,4 +1,24 @@
-Mon, 14 Mar 2016 10:59:15 +0200
+Thu, 14 Apr 2016 11:09:52 +0300
 README.rdoc	Mon, 14 Mar 2016 10:52:17 +0200
-app/controllers/application_controller.rb	Mon, 14 Mar 2016 10:52:17 +0200
+app/controllers/alliances_controller.rb	Tue, 12 Apr 2016 11:42:54 +0300
+app/controllers/application_controller.rb	Tue, 12 Apr 2016 11:58:43 +0300
+app/controllers/auth_controller.rb	Mon, 28 Mar 2016 14:57:13 +0300
+app/controllers/event_controller.rb	Tue, 05 Apr 2016 13:13:40 +0300
+app/controllers/heroes_controller.rb	Wed, 30 Mar 2016 17:46:45 +0300
+app/controllers/notifications_controller.rb	Wed, 06 Apr 2016 10:56:46 +0300
+app/controllers/time_availabilities_controller.rb	Mon, 28 Mar 2016 14:57:13 +0300
+app/controllers/users_controller.rb	Tue, 29 Mar 2016 12:17:49 +0300
 app/helpers/application_helper.rb	Mon, 14 Mar 2016 10:52:17 +0200
+app/helpers/heroes_helper.rb	Wed, 30 Mar 2016 17:35:55 +0300
+app/helpers/notifications_helper.rb	Tue, 29 Mar 2016 12:17:49 +0300
+app/helpers/users_helper.rb	Tue, 15 Mar 2016 15:35:29 +0200
+app/models/alliance.rb	Tue, 29 Mar 2016 12:17:49 +0300
+app/models/alliance_role.rb	Mon, 28 Mar 2016 14:57:13 +0300
+app/models/alliance_user.rb	Thu, 31 Mar 2016 15:21:52 +0300
+app/models/hero.rb	Wed, 30 Mar 2016 16:35:37 +0300
+app/models/notification.rb	Thu, 31 Mar 2016 15:21:52 +0300
+app/models/role.rb	Wed, 16 Mar 2016 17:06:16 +0200
+app/models/time_availability.rb	Mon, 28 Mar 2016 14:57:13 +0300
+app/models/user.rb	Tue, 29 Mar 2016 12:17:49 +0300
+app/services/marvel.rb	Thu, 31 Mar 2016 11:42:33 +0300
+app/services/token_provider.rb	Tue, 15 Mar 2016 15:26:00 +0200
